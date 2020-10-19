@@ -1,19 +1,5 @@
 // Firebase JavaScript
 
-// Firebase Configuration
-// visit https://console.firebase.google.com/u/1/project/projectID/settings/general/
-var firebaseConfig = {
-  apiKey: 'AIzaSyA_ZYd7TG30B_pfR3ULix3KAKz5kZ1jGgY',
-  authDomain: 'keegan-skeate-website.firebaseapp.com',
-  databaseURL: 'https://keegan-skeate-website.firebaseio.com',
-  projectId: 'keegan-skeate-website',
-  storageBucket: 'keegan-skeate-website.appspot.com',
-  messagingSenderId: '822937519150',
-  appId: '1:822937519150:web:d5186f68193902f3a7cbbf',
-  // measurementId: 'G-L7L5FE68R5',
-};
-firebase.initializeApp(firebaseConfig);
-
 // Listen for authentication state.
 var auth = firebase.auth();
 auth.onAuthStateChanged(function(user) {

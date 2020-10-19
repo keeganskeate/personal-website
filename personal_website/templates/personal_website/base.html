@@ -31,13 +31,10 @@
     <!-- <link rel="preconnect" href="https://cdn.jsdelivr.net"> -->
 
     <!-- Bootstrap Stylesheet -->
+    <!-- PRODUCTION: Serve from a CDN -->
     {% comment %} <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"> {% endcomment %}
-    <!-- DEV: Serve locally in development -->
+    <!-- DEV: Serve locally -->
     <link href="{% static 'personal_website/css/bootstrap.min.css'%}" rel="stylesheet" type="text/css">
-
-    <!-- Material Components Web Stylesheets -->
-    {% comment %} <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet" type="text/css">
-    <link href="{% static 'personal_website/css/app-bundle.css' %}" rel="stylesheet" type="text/css"> {% endcomment %}
 
     <!-- Main Stylesheets -->
     <link href="{% static 'personal_website/css/main.css'%}?{% now "U" %}" rel="stylesheet" type="text/css">
@@ -45,16 +42,13 @@
     <!-- Page-specific Stylesheets -->
     {% block page_css %}{% endblock %}
 
-    <!-- Icons -->
-    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> -->
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css"> -->
-
     <!-- Firebase JavaScript -->
     <!--<script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-performance.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-storage.js"></script>-->
+    {% comment %} <script src="https://www.gstatic.com/firebasejs/7.14.3/init.js"></script> {% endcomment %}
 
     <!-- Initialize Firebase -->
     <!--<script src="{% static 'personal_website/js/firebase.js'%}"></script>-->
@@ -63,12 +57,13 @@
     {% comment %} <script type="text/javascript">!function(n,e){var t,o,i,c=[],f={passive:!0,capture:!0},r=new Date,a="pointerup",u="pointercancel";function p(n,c){t||(t=c,o=n,i=new Date,w(e),s())}function s(){o>=0&&o<i-r&&(c.forEach(function(n){n(o,t)}),c=[])}function l(t){if(t.cancelable){var o=(t.timeStamp>1e12?new Date:performance.now())-t.timeStamp;"pointerdown"==t.type?function(t,o){function i(){p(t,o),r()}function c(){r()}function r(){e(a,i,f),e(u,c,f)}n(a,i,f),n(u,c,f)}(o,t):p(o,t)}}function w(n){["click","mousedown","keydown","touchstart","pointerdown"].forEach(function(e){n(e,l,f)})}w(n),self.perfMetrics=self.perfMetrics||{},self.perfMetrics.onFirstInputDelay=function(n){c.push(n),s()}}(addEventListener,removeEventListener);</script> {% endcomment %}
 
     <!-- jQuery -->
+    <!-- PRODUCTION: Serve from a CDN -->
     {% comment %} <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> {% endcomment %}
-    <!-- DEV: Serve locally in development -->
+    <!-- DEV: Serve locally -->
     <script src="{% static 'personal_website/js/jquery.slim.min.js'%}"></script>
 
   </head>
-  <body class="base dark">
+  <body class="base">
 
     <!-- Page -->
     <div id="page">
@@ -76,13 +71,11 @@
     </div>
 
     <!-- Bootstrap JavaScript -->
+    <!-- PRODUCTION: Serve from a CDN -->
     {% comment %} <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script> {% endcomment %}
     {% comment %} <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script> {% endcomment %}
-    <!-- DEV: Serve locally in development -->
+    <!-- DEV: Serve locally -->
     <script src="{% static 'personal_website/js/bootstrap.min.js'%}"></script>
-
-    <!-- Material Components Web JavaScript -->
-    {% comment %} <script src="{% static 'personal_website/js/app-bundle.js' %}"></script> {% endcomment %}
 
   </body>
 </html>

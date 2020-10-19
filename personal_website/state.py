@@ -20,8 +20,12 @@ state = {
         },
         { 
           "title": "LinkedIn",
-          "url": "https://twitter.com/KeeganSkeate",
+          "url": "https://www.linkedin.com/in/keegan-skeate-2181b1bb",
         },
+        {
+            "title": "StackOverflow",
+            "url": "http://stackoverflow.com/users/5021266/keegan-skeate",
+        }
     ]
 }
 

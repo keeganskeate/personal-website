@@ -1,6 +1,7 @@
 {
   "hosting": [
     {
+      "site": "keegan-skeate-website-dev",
       "target": "dev",
       "public": "public",
       "ignore": [
@@ -20,6 +21,7 @@
       ]
     },
     {
+      "site": "keegan-skeate-website",
       "target": "production",
       "public": "public",
       "ignore": [
