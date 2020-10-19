@@ -7,7 +7,7 @@ google-auth==1.20.1
 google-cloud-secret-manager==1.0.0
 gunicorn==20.0.4
 dj_static
-django==3.0.3
+django==3.0.7
 django-environ==0.4.5
 django-storages[google]==1.9.1
 firebase_admin==4.3.0
