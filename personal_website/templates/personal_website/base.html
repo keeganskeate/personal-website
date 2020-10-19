@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Site Details -->
+    <meta name="theme-color" content="#281e52"/>
+    <meta name="description" content="A personal website to share projects, ideas, and writing.">
+    <meta name="author" content="Keegan Skeate">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Title -->
+    <title>{% block title %}{% endblock %}</title>
+
+    {% load static %}
+
+    <!-- Favicon -->
+    <link rel="icon" href="{% static 'images/logos/favicon.ico' %}">
+    
+    <!-- Icons and Manifest TODO: -->
+    <link rel="icon" type="image/png" href="{% static 'images/logos/favicon-32x32.png' %}" sizes="32x32">
+    <link rel="icon" type="image/png" href="{% static 'images/logos/favicon-16x16.png' %}" sizes="16x16">
+    {% comment %} <link rel="manifest" href="{% static 'manifest.webmanifest' %}"> {% endcomment %}
+    <link rel="apple-touch-icon" href="{% static '/images/logos/apple-touch-icon.png' %}" sizes="180x180">
+    {% comment %} <link rel="mask-icon" href="{% static '/images/logos/safari-pinned-tab.svg' %}" color="#e48632"> {% endcomment %}
+    <link rel="shortcut icon" href="{% static '/images/logos/favicon.ico' %}" type="image/x-icon">
+
+    <!-- Connections -->
+    <!-- <link rel="preconnect" href="https://firebasestorage.googleapis.com"> -->
+    <!-- <link rel="preconnect" href="https://cdn.jsdelivr.net"> -->
+
+    <!-- Bootstrap Stylesheet -->
+    {% comment %} <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"> {% endcomment %}
+    <!-- DEV: Serve locally in development -->
+    <link href="{% static 'personal_website/css/bootstrap.min.css'%}" rel="stylesheet" type="text/css">
+
+    <!-- Material Components Web Stylesheets -->
+    {% comment %} <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet" type="text/css">
+    <link href="{% static 'personal_website/css/app-bundle.css' %}" rel="stylesheet" type="text/css"> {% endcomment %}
+
+    <!-- Main Stylesheets -->
+    <link href="{% static 'personal_website/css/main.css'%}?{% now "U" %}" rel="stylesheet" type="text/css">
+
+    <!-- Page-specific Stylesheets -->
+    {% block page_css %}{% endblock %}
+
+    <!-- Icons -->
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@latest/css/materialdesignicons.min.css"> -->
+
+    <!-- Firebase JavaScript -->
+    <!--<script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-performance.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-storage.js"></script>-->
+
+    <!-- Initialize Firebase -->
+    <!--<script src="{% static 'personal_website/js/firebase.js'%}"></script>-->
+
+    <!-- Google Analytics Helpers -->
+    {% comment %} <script type="text/javascript">!function(n,e){var t,o,i,c=[],f={passive:!0,capture:!0},r=new Date,a="pointerup",u="pointercancel";function p(n,c){t||(t=c,o=n,i=new Date,w(e),s())}function s(){o>=0&&o<i-r&&(c.forEach(function(n){n(o,t)}),c=[])}function l(t){if(t.cancelable){var o=(t.timeStamp>1e12?new Date:performance.now())-t.timeStamp;"pointerdown"==t.type?function(t,o){function i(){p(t,o),r()}function c(){r()}function r(){e(a,i,f),e(u,c,f)}n(a,i,f),n(u,c,f)}(o,t):p(o,t)}}function w(n){["click","mousedown","keydown","touchstart","pointerdown"].forEach(function(e){n(e,l,f)})}w(n),self.perfMetrics=self.perfMetrics||{},self.perfMetrics.onFirstInputDelay=function(n){c.push(n),s()}}(addEventListener,removeEventListener);</script> {% endcomment %}
+
+    <!-- jQuery -->
+    {% comment %} <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> {% endcomment %}
+    <!-- DEV: Serve locally in development -->
+    <script src="{% static 'personal_website/js/jquery.slim.min.js'%}"></script>
+
+  </head>
+  <body class="base dark">
+
+    <!-- Page -->
+    <div id="page">
+      {% block page %}{% endblock %}
+    </div>
+
+    <!-- Bootstrap JavaScript -->
+    {% comment %} <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script> {% endcomment %}
+    {% comment %} <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script> {% endcomment %}
+    <!-- DEV: Serve locally in development -->
+    <script src="{% static 'personal_website/js/bootstrap.min.js'%}"></script>
+
+    <!-- Material Components Web JavaScript -->
+    {% comment %} <script src="{% static 'personal_website/js/app-bundle.js' %}"></script> {% endcomment %}
+
+  </body>
+</html>

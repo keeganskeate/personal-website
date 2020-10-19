@@ -1,0 +1,48 @@
+{
+  "name": "personal-website",
+  "productName": "Personal Website",
+  "version": "1.0.0",
+  "license": "GPLv3",
+  "private": false,
+  "description": "Personal website.",
+  "author": "Keegan Skeate <keeganskeate@gmail.com>",
+  "build": {
+    "productName": "Keegan Skeate"
+  },
+  "scripts": {
+    "build": "webpack",
+    "files": "python manage.py collectstatic",
+    "lint": "python manage.py check",
+    "dev": "start cmd.exe /k python manage.py runserver && python manage.py livereload",
+    "dev-publish": "firebase deploy --only hosting:dev",
+    "obfuscate": "webpack --config obfuscate.config.js",
+    "publish": "firebase deploy --only hosting:production"
+  },
+  "dependencies": {
+    "@2dimensions/flare-js": "^1.0.0",
+    "@popperjs/core": "^2.5.3",
+    "@primer/octicons": "^11.0.0",
+    "bootstrap": "^4.5.2",
+    "firebase": "^7.24.0",
+    "jquery": "^3.5.1",
+    "material-components-web": "^7.0.0",
+    "popper.js": "^1.16.1",
+    "stripe": "^8.111.0",
+    "style-loader": "^1.2.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.11.5",
+    "autoprefixer": "^9.8.6",
+    "babel-loader": "^8.1.0",
+    "css-loader": "^4.2.2",
+    "extract-loader": "^5.1.0",
+    "file-loader": "^6.1.0",
+    "postcss-loader": "^3.0.0",
+    "sass": "^1.26.10",
+    "sass-loader": "^10.0.2",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  }
+}

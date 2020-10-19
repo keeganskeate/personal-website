@@ -1,0 +1,54 @@
+<!-- Home Page -->
+{% extends "personal_website/index.html" %}
+
+{% load static %}
+
+{% block material %}
+  <div class="homepage pb-5">
+
+    <!-- Main Feature -->
+    <div class="position-relative overflow-hidden light-green-fade py-3 my-3 text-center text-lg-left">
+      <div class="d-flex mt-auto justify-content-center flex-wrap-reverse">
+        <div class="col-lg-5">
+          <h1 class="display-4 font-weight-normal">
+            Donate
+          </h1>
+          <p class="lead font-weight-normal mb-4">
+
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Vine -->
+    <img class="side-vine" height="300" src="{% static 'personal_website/images/theme/bean_stalk_curly.svg' %}">
+
+<!-- Features -->
+<div class="container">
+
+    <!-- Feature -->
+    <div class="row align-items-center justify-content-center">
+      <p>TODO: Implement Stripe donations</p>
+    </div>
+
+    <!-- Vine -->
+    <img class="side-vine side-vine-right" height="300" src="{% static 'personal_website/images/theme/bean_stalk_curly.svg' %}">
+
+  </div>
+  </div>
+
+  <!-- Vines -->
+  <img src="{% static 'personal_website/images/theme/bean_stalk_simple.svg' %}"
+    class="side-vine side-vine-right straight-vine-right"
+    height="100" 
+  >
+  <img src="{% static 'personal_website/images/theme/bean_stalk_complex.svg' %}"
+    class="side-vine side-vine-right straight-vine-right"
+    height="300" 
+  >
+  <img src="{% static 'personal_website/images/theme/bean_stalk_simple.svg' %}"
+    class="side-vine side-vine-right straight-vine-right vine-nudge-left"
+    height="150" 
+  >
+
+{% endblock %}

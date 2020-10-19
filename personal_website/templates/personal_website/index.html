@@ -1,0 +1,19 @@
+<!-- About Page -->
+{% extends "personal_website/base.html" %}
+
+{% load static %}
+
+{% block page %}
+
+  <!-- Header -->
+  {% include "personal_website/layout/header.html" %}
+
+  <!-- Core Material -->
+  <div id="material">
+    {% block material %}{% endblock %}
+  </div>
+
+  <!-- Footer -->
+  {% include "personal_website/layout/footer.html" %}
+
+{% endblock %}

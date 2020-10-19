@@ -1,0 +1,122 @@
+<!-- Contact Page -->
+{% extends "personal_website/index.html" %}
+
+{% load static %}
+
+{% comment %} https://docs.djangoproject.com/en/3.1/topics/email/ {% endcomment %}
+
+{% block material %}
+  <div class="contact container my-4 my-lg-5">
+
+    <link href="{% static 'personal_website/css/forms.css' %}?{% now "U" %}" rel="stylesheet" type="text/css">
+
+      <!-- Form -->
+    <div class="row featurette my-5">
+
+      <!-- Form Image -->
+      <div class="col-md-5 order-md-1 order-lg-2 mb-5">
+        <img
+          src="{% static 'personal_website/images/illustrations/lab_office_cat_tea.svg' %}"
+          width="100%"
+        >
+        <!-- TODO: Attribute: all-free-download.com -->
+      </div>
+
+      <!-- Form Text -->
+      <div class="col-md-7 order-md-2 order-lg-1">
+        <h2 class="featurette-heading mt-0">
+          Contact
+          <span class="text-muted">
+            You're welcome to contact me anytime about anyhing.
+          </span>
+        </h2>
+        <p class="lead double-line">
+          Please enter your contact information and message
+          and I will get back to you as soon as possible.
+        </p>
+          <!-- Please email your questions, ideas, and requests to
+              <a href="mailto:keeganskeate@gmail.com">keeganskeate@gmail.com</a> and I will be quick to respond. -->
+
+          <form class="mb-5 pb-5" style="max-width:420px;"><!-- mx-auto -->
+            {% csrf_token %}
+
+            <!-- Name Field -->
+            <div class="fieldWrapper">
+              <div class="form-group">
+                <label for="input_name">Name</label>
+                <input
+                  type="text"
+                  id="input_name"
+                  class="form-control"
+                  required
+                  autofocus
+                >
+              </div>
+            </div>
+
+            <!-- Email Field -->
+            <div class="fieldWrapper">
+              <div class="form-group">
+                <label for="input_email">Email address</label>
+                <input
+                  type="email"
+                  id="input_email"
+                  class="form-control"
+                  required
+                >
+              </div>
+            </div>
+
+            <!-- Message Field -->
+            <div class="fieldWrapper">
+              <div class="form-group">
+                <label for="input_message">Message</label>
+                <textarea class="form-control" id="input_message" rows="5"></textarea>
+              </div>
+              <!--<div class="form-label-group">
+                <input
+                  type="text"
+                  id="input_message"
+                  class="form-control"
+                  placeholder="Start typing your message..."
+                  required
+                  autofocus
+                >
+                <label for="input_message">Message</label>
+              </div>-->
+            </div>
+
+            <!-- Submit Button -->
+            <button
+              type="button"
+              onclick="sendFirestoreEmail()"
+              class="btn btn-lg btn-block btn-success"
+            >
+              Send
+            </button>
+
+            {% comment %} <input type="submit" value="Submit"> {% endcomment %}
+          </form>
+      </div>
+  
+    </div>
+
+  </div>
+
+  <!-- Toast Message -->
+  {% comment %} <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" id="success-toast"
+    style="position: absolute; top: 0; right: 0;"
+  >
+    <div class="toast-header">
+      <strong class="mr-auto">Bootstrap</strong>
+      <small>11 mins ago</small>
+      <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="toast-body">
+      Hello, world! This is a toast message.
+    </div>
+  </div> {% endcomment %}
+
+{% endblock %}

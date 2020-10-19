@@ -1,0 +1,30 @@
+{% extends "personal_website/index.html" %}
+
+{% block material %}
+
+  <div class="not-found full-height simple-column align-items-center mb-5 pb-5"
+    style="margin-top:64px;"
+  >
+
+    <div class="simple-card-content simple-column">
+      {% load static %}
+      <img src="{% static 'personal_website/images/theme/acorn_original.svg' %}"
+        class="mb-2"
+      >
+      <h1 class="simple-title">
+        Thank you
+      </h1>
+      <p>
+        Thank you for your message.
+      </p>
+      <a
+        type="button"
+        class="btn btn-outline-success mt-3"
+        href="{% url 'index' %}"
+      >
+        Home
+      </a>
+    </div>
+  </div>
+
+{% endblock %}

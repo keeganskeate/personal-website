@@ -1,0 +1,83 @@
+<!-- Login Page -->
+{% extends "personal_website/base.html" %}
+
+{% block page %}
+
+  {% load static %}
+  <link href="{% static 'personal_website/css/login.css' %}?{% now "U" %}" rel="stylesheet" type="text/css">
+
+  <div class="login" style="min-height: 100vh">
+    
+    <form class="form-signin" action="{% url 'login' %}" method="post">
+      {% csrf_token %}
+      <div class="text-center mb-4">
+        <h1 class="h3 mb-3 brand-font font-weight-normal">
+          Login
+        </h1>
+      </div>
+
+      <!-- Login Errors -->
+      {% if form.errors %}
+        <p>Your username and password didn't match. Please try again.</p>
+      {% endif %}
+
+      <!-- Email Field -->
+       <div class="fieldWrapper">
+        <div class="form-label-group">
+          <input
+            type="email"
+            id="input_email"
+            class="form-control"
+            placeholder="Email address"
+            required
+            autofocus
+          >
+          <label for="{{ form.email.id_for_label }}">Email address</label>
+        </div>
+      </div>
+
+      <!-- Password Field -->
+       <div class="fieldWrapper">
+        <div class="form-label-group">
+          <input
+            type="password"
+            id="input_password"
+            class="form-control"
+            placeholder="Password"
+            required
+            autofocus
+          >
+          <label for="{{ form.password.id_for_label }}">Password</label>
+        </div>
+      </div>
+
+      <!-- Options -->
+      <div class="d-flex justify-content-between">
+
+        <!-- Remember Me -->
+        <div class="checkbox mb-3">
+          <label>
+            <input type="checkbox" value="remember-me"> Remember me
+          </label>
+        </div>
+
+        <!-- Reset Password -->
+        <a href="{% url 'password_reset' %}">Lost password?</a>
+      
+      </div>
+
+      <!-- Sign In -->
+      <input  class="btn btn-lg btn-primary btn-block" type="submit" value="Sign In">
+      <input type="hidden" name="next" value="{{ next }}">
+
+      <!-- Sign Up -->
+      <p class="text-center h6 font-weight-light mt-5">
+        <small>New to the site?
+          <a class="" href="#">Sign up!</a>
+        </small>
+      </p>
+
+    </form>
+
+  </div>
+{% endblock %}

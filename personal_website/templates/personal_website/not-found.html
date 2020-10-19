@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+  <div class="not-found full-height simple-column mb-5 pb-5"
+    style="margin-top:64px;"
+  >
+
+    <div class="simple-card-content simple-column">
+      {% load static %}
+      <img src="{% static 'personal_website/images/theme/acorn_original.svg' %}"
+        class="mb-2"
+      >
+      <h1 class="simple-title">
+        Under Development
+      </h1>
+      <p>
+        Thank you for your patience.
+      </p>
+      <a
+        type="button"
+        class="btn btn-outline-success mt-3"
+        href="{% url 'index' %}"
+      >
+        Home
+      </a>
+    </div>
+  </div>
+</html>
