@@ -5,9 +5,7 @@ My (your) personal website.
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
-> My personal website is a modern portfolio website, built on the bleeding edge, to help you showcase your work.
-
-My personal website comes with **batteries included**, but you are always welcome to supercharge your setup with modifications and custom components. My personal website is:
+My personal website is a modern portfolio website, built on the bleeding edge, to help you showcase your work. My personal website comes with **batteries included**, but you are always welcome to supercharge your setup with modifications and custom components. My personal website is:
 
 * Free software.
 * Freedom respecting.
@@ -15,7 +13,7 @@ My personal website comes with **batteries included**, but you are always welcom
 
 > Currently, nonfree software is used in parts of my personal website. The mission of my personal website is to systematically migrate from any nonfree software to free software.
 
-[TOC]
+<!-- FIXME: [TOC] -->
 
 ## 🗺️ Road Map
 
@@ -65,7 +63,7 @@ See [`docs/installation.md`](docs/installation.md) for complete installation ins
 
 For a quick start, simply clone the repository:
 
-```
+```shell
 
 git clone https://github.com/keeganskeate/personal-website.git
 
@@ -79,17 +77,18 @@ My personal website is built with [Python] using the [Django] framework. My pers
   * Uploaded to [Cloud Registry].
   * Runs as a stateless container on [Cloud Run].
   * [Cloud Secret Manager](https://cloud.google.com/secret-manager/) is used for storing configurations and keeping secrets secret.
-  * *Optional* [Cloud SQL](https://cloud.google.com/sql) can be utilized if desired.
-  * *Optional* [Cloud Storage](https://cloud.google.com/storage) buckets can be used for file storage.
+  * (*Optional*) [Cloud SQL](https://cloud.google.com/sql) can be utilized if desired.
+  * (*Optional*) [Cloud Storage](https://cloud.google.com/storage) buckets can be used for file storage.
 
 See [`docs/architecture.md`](docs/architecture.md) for information about the repository's architecture.
 
-Resources:
+Helpful resources:
 
 * [WSGI Servers](https://www.fullstackpython.com/wsgi-servers.html)
 
 <!-- Architecture References: -->
 
+  [Cloud Build]: https://cloud.google.com/cloud-build/docs
   [Cloud Registry]: https://cloud.google.com/container-registry
   [Cloud Run]: https://firebase.google.com/docs/hosting/cloud-run
   [Dart]: https://dart.dev/guides
@@ -118,11 +117,25 @@ python manage.py migrate
 
 ```
 
-Resources:
+Helpful resources:
 
 * [Django Database API](https://docs.djangoproject.com/en/3.1/topics/db/queries/)
 
 ## 📁 Storage
+
+You can gather all supporting files into the `static` folder with:
+
+```shell
+
+python manage.py collectstatic
+
+```
+
+> Add the `--noinput` tag to suppress the overwrite warning.
+
+You can configure static files to be served from [Firebase Storage](https://firebase.google.com/docs/storage) instead of from [Firebase Hosting](https://firebase.google.com/docs/hosting) in `personal_website/settings.py`.
+
+Helpful resources:
 
 * [Serving static files on App Engine](https://cloud.google.com/appengine/docs/standard/python3/serving-static-files)
 
@@ -192,7 +205,7 @@ Below is a non-exhaustive list of helpful resources:
 
 * [Django Philosophy](https://docs.djangoproject.com/en/3.1/misc/design-philosophies)
 * [Django on Cloud Run](https://codelabs.developers.google.com/codelabs/cloud-run-django)
-* [Firebase Storage in GCF](https://hackersandslackers.com/manage-files-in-google-cloud-storage-with-python/)
+* [Firebase Storage in Google Cloud Functions](https://hackersandslackers.com/manage-files-in-google-cloud-storage-with-python/)
 * [Design Tips](https://dribbble.com/stories/2020/04/22/designing-for-conversions-7-ux-tips-ecommerce?utm_campaign=2020-05-05&utm_medium=email&utm_source=courtside-20200505)
 * [Docker Tips](https://twg.io/blog/things-i-wish-i-knew-about-docker-before-i-started-using-it/)
 * [Testing Docker Locally](https://cloud.google.com/run/docs/testing/local)
@@ -210,9 +223,9 @@ Contributions are always welcome! You are encouraged to submit issues, functiona
 
 Anyone is welcome to contribute anything. Currently, my personal website would love:
 
-* Art;
-* More code;
-* More documentation;
+* Art.
+* More code.
+* More documentation.
 * Ideas.
 
 ## 📜 License

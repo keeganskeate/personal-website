@@ -33,6 +33,8 @@ python manage.py collectstatic
 
 > Add the `--noinput` tag to suppress the overwrite warning.
 
+You can configure static files to be served from [Firebase Storage](https://firebase.google.com/docs/storage) instead of from [Firebase Hosting](https://firebase.google.com/docs/hosting) in `personal_website/settings.py`.
+
 ## Running
 
 You can then serve the site locally with:
