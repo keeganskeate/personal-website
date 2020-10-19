@@ -56,7 +56,7 @@ Developing my personal website requires installing the following tools:
 
 See [`docs/installation.md`](docs/installation.md) for complete installation instructions that guide you through:
 
-* Cloning the Cannlytics Engine.
+* Cloning the repository.
 * Setting your account credentials.
 * Installing Python and Python dependencies.
 * Installing development tools.
