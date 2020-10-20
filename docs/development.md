@@ -107,6 +107,10 @@ Default Django templates can be found in your Anaconda/Python directory in `Lib\
 
 All text material is either stored in JSON in `state.py` or written in Markdown in `docs` directories.
 
+Resources:
+
+* [`python-markdown` Extensions](https://python-markdown.github.io/extensions/)
+
 ## Data
 
 The personal website has opted for a NoSQL approach for data management.
