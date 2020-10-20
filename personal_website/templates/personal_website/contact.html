@@ -23,21 +23,21 @@
       </div>
 
       <!-- Form Text -->
-      <div class="col-md-7 order-md-2 order-lg-1">
+      <div class="col-md-7 order-md-2 order-lg-1 pr-lg-5">
         <h2 class="featurette-heading mt-0">
-          Contact
+          Contact me.
           <span class="text-muted">
-            You're welcome to contact me anytime about anyhing.
+            You're welcome to contact me anytime about anything.
           </span>
         </h2>
-        <p class="lead double-line">
+        <p class="lead mb-3">
           Please enter your contact information and message
           and I will get back to you as soon as possible.
         </p>
           <!-- Please email your questions, ideas, and requests to
               <a href="mailto:keeganskeate@gmail.com">keeganskeate@gmail.com</a> and I will be quick to respond. -->
 
-          <form class="mb-5 pb-5" style="max-width:420px;"><!-- mx-auto -->
+          <form class="mb-5 pb-5"><!-- mx-auto -->
             {% csrf_token %}
 
             <!-- Name Field -->
@@ -90,7 +90,7 @@
             <button
               type="button"
               onclick="sendFirestoreEmail()"
-              class="btn btn-lg btn-block btn-success"
+              class="btn btn-lg btn-block btn-primary"
             >
               Send
             </button>

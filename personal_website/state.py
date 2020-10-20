@@ -44,6 +44,13 @@ homepage = {
             "description": "Ever since I learned Python, I've wanted to create a website with Python. This site is built with Python Django and is open source, so, you can clone this website and tinker with it to your heart's content.",
             "written_at": "Oct. 18, 2020",
             "url": "posts/2020/10/18/creating-a-django-website-and-hosting-it-with-firebase",
+        },
+        {
+            "category": "Python",
+            "title": "Creating a Django Website and Hosting it with Firebase",
+            "description": "Ever since I learned Python, I've wanted to create a website with Python. This site is built with Python Django and is open source, so, you can clone this website and tinker with it to your heart's content.",
+            "written_at": "Oct. 18, 2020",
+            "url": "posts/2020/10/18/creating-a-django-website-and-hosting-it-with-firebase",
         }
     ],
     "post_index": [

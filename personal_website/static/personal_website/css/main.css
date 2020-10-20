@@ -5,6 +5,7 @@
 ---------------------------------------------------------------------------*/
 
 /* TODO: Import only sizes used */
+@import url('https://fonts.googleapis.com/css?family=Source+Serif+Pro:100,200,300,400,500,600,700');
 @import url('https://fonts.googleapis.com/css?family=Libre+Franklin:100,200,300,400,500,600,700');
 @import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:100,200,300,400,500,600,700');
 /* @import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Text&display=swap'); */
@@ -25,6 +26,9 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Libre Franklin';
 }
 .serif {
+  font-family: 'Libre Baskerville' !important
+}
+.display-4 {
   font-family: 'Libre Baskerville' !important
 }
 
@@ -49,7 +53,7 @@ a[href]:link {
 } */
 p {
   margin-bottom: 0;
-  font-family: 'Libre Baskerville', sans-serif;
+  font-family: 'Source Serif Pro', Georgia, 'Times New Roman', Times, serif;
   font-size: 1.25rem;
 }
 p, ul {
@@ -194,10 +198,10 @@ a.personal-dark-orange-text:hover {
   Theme Components
 ---------------------------------------------------------------------------*/
 
-.form-control:focus {
+/* .form-control:focus {
   border-color: #96e6a1;
   box-shadow: 0 0 0 0.2rem #96e6a140;
-}
+} */
 .custom-checkbox .custom-control-label::after,
 .custom-checkbox .custom-control-label::before {
   border-color: #96e6a1 !important;
@@ -567,6 +571,15 @@ body.dark .card {
 body.dark .card {
   color: #f5f5f5;
 }
+.bg-white-dynamic {
+  background-color: #fff;
+}
+body.dark .bg-white-dynamic {
+  background-color: #281e52;;
+}
+body.dark label {
+  color: #f5f5f5;
+}
 
 /*--------------------------------------------------------------------------
   Theme Icons
@@ -635,6 +648,9 @@ body.dark .wave svg path {
 }
 .wave.green svg path {
   fill: #1f622f !important;
+}
+.wave.blue svg path {
+  fill: #007bff !important;
 }
 .ground {
   background: #d4fc7933;

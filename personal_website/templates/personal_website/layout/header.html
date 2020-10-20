@@ -58,7 +58,7 @@
         <!-- Action Button for Small Screens -->
         <li class="nav-item d-lg-none mt-2">
           <a
-            class="nav-link btn btn-outline-success px-2"
+            class="nav-link btn btn-outline-primary px-2"
             href="{% url header.action.url %}"
             style="display:unset"
           >
@@ -72,7 +72,7 @@
     <!-- Action Button for large screens -->
     <a
       type="button"
-      class="btn btn-outline-success d-none d-lg-block"
+      class="btn btn-outline-primary d-none d-lg-block"
       href="{% url header.action.url %}"
     >
       {{ header.action.title }}
@@ -86,6 +86,11 @@
       var element = document.body;
       element.classList.toggle('dark');
     }
+
+    var hours = new Date().getHours();
+    var dayTime = hours > 6 && hours < 20;
+    if (!dayTime) toggleTheme('dark');
+
   </script>
 
 </html>

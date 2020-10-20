@@ -17,7 +17,7 @@
   border-bottom: 1px solid #e5e5e5;
 }
 .blog-header-logo {
-  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+  font-family: "Source Serif Pro", Georgia, "Times New Roman", serif;
   font-size: 2.25rem;
 }
 .blog-header-logo:hover {
@@ -25,7 +25,7 @@
 }
 
 /* h1, h2, h3, h4, h5, h6 {
-  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+  font-family: "Source Serif Pro", Georgia, "Times New Roman", serif;
 } */
 
 .display-4 {

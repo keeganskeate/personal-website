@@ -32,6 +32,9 @@ Color resources:
 * [Gradients (UI)](https://uigradients.com/#KyooTah)
 * [Gradients (Web)](https://webgradients.com/)
 * [CSS Transparency](https://stackoverflow.com/questions/23201134/transparent-argb-hex-value)
+* [Encycolorpedia](https://encycolorpedia.com/)
+* [Paletton](https://paletton.com/)
+* [HTML Color Codes](https://htmlcolorcodes.com/)
 
 ## Fonts
 

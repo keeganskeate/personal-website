@@ -205,17 +205,17 @@ Below is a non-exhaustive list of helpful resources:
 
 * [Django Philosophy](https://docs.djangoproject.com/en/3.1/misc/design-philosophies)
 * [Django on Cloud Run](https://codelabs.developers.google.com/codelabs/cloud-run-django)
-* [Firebase Storage in Google Cloud Functions](https://hackersandslackers.com/manage-files-in-google-cloud-storage-with-python/)
-* [Design Tips](https://dribbble.com/stories/2020/04/22/designing-for-conversions-7-ux-tips-ecommerce?utm_campaign=2020-05-05&utm_medium=email&utm_source=courtside-20200505)
-* [Docker Tips](https://twg.io/blog/things-i-wish-i-knew-about-docker-before-i-started-using-it/)
-* [Testing Docker Locally](https://cloud.google.com/run/docs/testing/local)
-* [The Python Runtime for the App Engine Flexible Environment](https://cloud.google.com/appengine/docs/flexible/python/runtime)
-* [Quickstart for Python in the App Engine Flexible Environment](https://cloud.google.com/appengine/docs/flexible/python/quickstart#windows)
-* [VS Code Django Guide](https://code.visualstudio.com/docs/python/tutorial-django)
-* [How to reload Django?](https://stackoverflow.com/questions/19094720/how-to-automatically-reload-django-when-files-change)
 * [django-livereload](https://github.com/Fantomas42/django-livereload)
 * [django-livereload-server](https://github.com/tjwalch/django-livereload-server)
-* [Browser Sync with Django and Docker](https://stackoverflow.com/questions/49482710/using-browser-sync-with-django-on-docker-compose)
+* [Django Browser Sync with Docker](https://stackoverflow.com/questions/49482710/using-browser-sync-with-django-on-docker-compose)
+* [Design Tips](https://dribbble.com/stories/2020/04/22/designing-for-conversions-7-ux-tips-ecommerce?utm_campaign=2020-05-05&utm_medium=email&utm_source=courtside-20200505)
+* [Docker Tips](https://twg.io/blog/things-i-wish-i-knew-about-docker-before-i-started-using-it/)
+* [Firebase Storage in Google Cloud Functions](https://hackersandslackers.com/manage-files-in-google-cloud-storage-with-python/)
+* [How to reload Django?](https://stackoverflow.com/questions/19094720/how-to-automatically-reload-django-when-files-change)
+* [Quickstart for Python in the App Engine Flexible Environment](https://cloud.google.com/appengine/docs/flexible/python/quickstart#windows)
+* [Testing Docker Locally](https://cloud.google.com/run/docs/testing/local)
+* [The Python Runtime for the App Engine Flexible Environment](https://cloud.google.com/appengine/docs/flexible/python/runtime)
+* [VS Code Django Guide](https://code.visualstudio.com/docs/python/tutorial-django)
 
 ## 🤝 Contributing
 
