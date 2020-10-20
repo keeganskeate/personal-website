@@ -1,6 +1,6 @@
-<h3 class="pb-4 mb-4 font-italic border-bottom">
+<h1 class="pb-4 mb-4 font-italic border-bottom">
   About
-</h3>
+</h1>
 <!-- TODO: Profile image -->
 
 My name is Keegan Skeate and I am an economist, software developer, data scientist, and laboratory analyst.

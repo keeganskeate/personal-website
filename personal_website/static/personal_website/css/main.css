@@ -8,12 +8,32 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Serif+Pro:100,200,300,400,500,600,700');
 @import url('https://fonts.googleapis.com/css?family=Libre+Franklin:100,200,300,400,500,600,700');
 @import url('https://fonts.googleapis.com/css?family=Libre+Baskerville:100,200,300,400,500,600,700');
-/* @import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Text&display=swap'); */
 @import url("https://fonts.googleapis.com/css?family=Cinzel:400");
+/* @import url('https://fonts.googleapis.com/css2?family=Libre+Caslon+Text&display=swap'); */
 /* import './assets/fonts/et-line/et-line.css'; */
 
 /*--------------------------------------------------------------------------
-  Fonts
+  Main tags
+---------------------------------------------------------------------------*/
+
+body {
+  margin: 0;
+  background: #fff;
+}
+p {
+  margin-bottom: 0;
+  font-family: 'Source Serif Pro', Georgia, 'Times New Roman', Times, serif;
+  font-size: 1.25rem;
+}
+p, ul {
+  line-height: 1.5;
+}
+a {
+  text-decoration: none;
+}
+
+/*--------------------------------------------------------------------------
+  Text
 ---------------------------------------------------------------------------*/
 
 * {
@@ -31,34 +51,6 @@ h1, h2, h3, h4, h5, h6 {
 .display-4 {
   font-family: 'Libre Baskerville' !important
 }
-
-/*--------------------------------------------------------------------------
-  Main Tags
----------------------------------------------------------------------------*/
-
-a {
-  text-decoration: none;
-}
-/* a[href]:hover {
-  background: #e7f2e2;
-  text-decoration: none;
-}
-a[href]:visited {
-  color: #505050;
-  text-decoration-color: #777;
-}
-a[href]:link {
-  color: #049;
-  text-decoration-color: #5e93d5;
-} */
-p {
-  margin-bottom: 0;
-  font-family: 'Source Serif Pro', Georgia, 'Times New Roman', Times, serif;
-  font-size: 1.25rem;
-}
-p, ul {
-  line-height: 1.5;
-}
 .bold {
   font-weight: 600 !important;
 }
@@ -67,20 +59,45 @@ p, ul {
 }
 
 /*--------------------------------------------------------------------------
-  General
+  Markdown Text
 ---------------------------------------------------------------------------*/
-/* body, html, .base, #page {
-  min-height: 100%;
-} */
-body {
-  margin: 0;
-  background: #fff;
-  overflow-x: hidden;
+
+.markdown h2 {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+.markdown h3 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+.markdown p {
+  margin-top: 1.5rem;
+  line-height: 1.75;
+}
+.markdown p a {
+  font-family: 'Source Serif Pro', Georgia, 'Times New Roman', Times, serif;
+  font-size: 1.25rem;
+}
+body.dark .markdown a {
+  color: #45B649;
+}
+body.dark .markdown a:hover {
+  color: #96e6a1;
 }
 
 /*--------------------------------------------------------------------------
   Colors
 ---------------------------------------------------------------------------*/
+
+.text-secondary-on-light {
+  color: #ccc;
+  color: var(--mdc-theme-text-secondary-on-dark, #ccc);
+}
+a.text-secondary-on-light:hover {
+  color: #ccc;
+  color: var(--mdc-theme-text-hint-on-dark, #ccc);
+}
 ::-moz-selection {
   color: #1a1a1a;
   background: #96e6a1;
@@ -192,34 +209,6 @@ a.personal-dark-orange-text:hover {
 }
 .brand-copyright {
   font-size: 8px;
-}
-
-/*--------------------------------------------------------------------------
-  Theme Components
----------------------------------------------------------------------------*/
-
-/* .form-control:focus {
-  border-color: #96e6a1;
-  box-shadow: 0 0 0 0.2rem #96e6a140;
-} */
-.custom-checkbox .custom-control-label::after,
-.custom-checkbox .custom-control-label::before {
-  border-color: #96e6a1 !important;
-}
-.custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
-  background-color: #45B649 !important;
-  border-color: #96e6a1 !important;
-}
-.custom-checkbox .custom-control-input:checked:focus ~ .custom-control-label::before {
-  /* box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(0, 255, 0, 0.25) */
-  box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem #45B64940;
-}
-.custom-checkbox .custom-control-input:focus ~ .custom-control-label::before {
-  /* box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(0, 0, 0, 0.25) */
-  box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem #45B64940;
-}
-.custom-checkbox .custom-control-input:active ~ .custom-control-label::before {
-  background-color: #96e6a1;
 }
 
 /*--------------------------------------------------------------------------
@@ -396,25 +385,6 @@ a.personal-dark-orange-text:hover {
 }
 
 /*--------------------------------------------------------------------------
-  Backgrounds
----------------------------------------------------------------------------*/
-
-/* .faded-background {
-  background-image: linear-gradient(transparent, var(--v-lightBackground-base));
-}
-.shadow-background {
-  background: url($shadow-background) no-repeat left top;
-  background-size: 100% 100%;
-}
-.fireworks-background {
-  background: url($fireworks-background) no-repeat top center;
-  background-size: cover;
-}
-.background-transparent {
-  background-color: transparent !important;
-} */
-
-/*--------------------------------------------------------------------------
   Lists
 ---------------------------------------------------------------------------*/
 
@@ -457,6 +427,34 @@ ul.two-by-two {
 }
 
 /*--------------------------------------------------------------------------
+  Forms
+---------------------------------------------------------------------------*/
+
+/* .form-control:focus {
+  border-color: #96e6a1;
+  box-shadow: 0 0 0 0.2rem #96e6a140;
+} */
+.custom-checkbox .custom-control-label::after,
+.custom-checkbox .custom-control-label::before {
+  border-color: #96e6a1 !important;
+}
+.custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
+  background-color: #45B649 !important;
+  border-color: #96e6a1 !important;
+}
+.custom-checkbox .custom-control-input:checked:focus ~ .custom-control-label::before {
+  /* box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(0, 255, 0, 0.25) */
+  box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem #45B64940;
+}
+.custom-checkbox .custom-control-input:focus ~ .custom-control-label::before {
+  /* box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem rgba(0, 0, 0, 0.25) */
+  box-shadow: 0 0 0 1px #fff, 0 0 0 0.2rem #45B64940;
+}
+.custom-checkbox .custom-control-input:active ~ .custom-control-label::before {
+  background-color: #96e6a1;
+}
+
+/*--------------------------------------------------------------------------
   Animations
 ---------------------------------------------------------------------------*/
 
@@ -482,7 +480,49 @@ ul.two-by-two {
 }
 
 /*--------------------------------------------------------------------------
-  Helpers
+  Waves
+---------------------------------------------------------------------------*/
+
+.wave {
+  overflow: hidden;
+}
+.wave.big {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+.wave.small {
+  height: 150px;
+}
+.wave.upside-down svg {
+  transform: scaleY(-1);
+}
+.wave svg {
+  height: 100%;
+  width: 100%;
+}
+.wave svg path {
+  fill: #d4fc7933;
+  stroke: none;
+}
+body.dark .wave svg path {
+  fill: #554b8033;
+}
+.wave.green svg path {
+  fill: #1f622f !important;
+}
+.wave.blue svg path {
+  fill: #007bff !important;
+}
+.ground {
+  background: #d4fc7933;
+}
+body.dark .ground {
+  background: #554b8033;
+}
+
+/*--------------------------------------------------------------------------
+  Vines
 ---------------------------------------------------------------------------*/
 .first-vine {
   /* z-index: -1; */
@@ -509,29 +549,11 @@ ul.two-by-two {
 }
 
 /*--------------------------------------------------------------------------
-  Colors
----------------------------------------------------------------------------*/
-
-.text-secondary-on-light {
-  color: #ccc;
-  color: var(--mdc-theme-text-secondary-on-dark, #ccc);
-}
-a.text-secondary-on-light:hover {
-  color: #ccc;
-  color: var(--mdc-theme-text-hint-on-dark, #ccc);
-}
-
-
-/*--------------------------------------------------------------------------
   Dark Theme
 ---------------------------------------------------------------------------*/
 
 body.dark {
   background: #281e52;
-  /* background: -webkit-linear-gradient(to top left, #544a7d, #ffd45233); */
-  /* Chrome 10-25, Safari 5.1-6 */
-  /* background: linear-gradient(to top left, #544a7d, #ffd45233); */
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 body.dark p,
 body.dark h1,
@@ -582,7 +604,7 @@ body.dark label {
 }
 
 /*--------------------------------------------------------------------------
-  Theme Icons
+  Dark theme icons
 ---------------------------------------------------------------------------*/
 
 .theme-toggle {
@@ -615,46 +637,4 @@ body.dark .navbar-light .navbar-toggler {
 }
 body.dark .dropdown-item {
   color: #1a1a1a !important;
-}
-
-/*--------------------------------------------------------------------------
-  Waves
----------------------------------------------------------------------------*/
-
-.wave {
-  overflow: hidden;
-}
-.wave.big {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-}
-.wave.small {
-  height: 150px;
-}
-.wave.upside-down svg {
-  transform: scaleY(-1);
-}
-.wave svg {
-  height: 100%;
-  width: 100%;
-}
-.wave svg path {
-  fill: #d4fc7933;
-  stroke: none;
-}
-body.dark .wave svg path {
-  fill: #554b8033;
-}
-.wave.green svg path {
-  fill: #1f622f !important;
-}
-.wave.blue svg path {
-  fill: #007bff !important;
-}
-.ground {
-  background: #d4fc7933;
-}
-body.dark .ground {
-  background: #554b8033;
 }
