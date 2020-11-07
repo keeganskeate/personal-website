@@ -2,11 +2,11 @@
 
 Style distinguishes one site from another. You are free and encouraged to modify the style to create a site that is uniquely yours.
 
-[TOC]
 
 ## Themes
 
 [Bootswatch](https://bootswatch.com/help/) provides many great themes. The [pulse theme](https://bootswatch.com/pulse/) is the default theme of the personal website.
+
 
 ## Design Patterns
 
@@ -16,6 +16,7 @@ Style distinguishes one site from another. You are free and encouraged to modify
 - Waves between sections
   * [Waves with CSS](https://stackoverflow.com/questions/17202548/wavy-shape-with-css)
   * [Wave Generator](https://smooth.ie/blogs/news/svg-wavey-transitions-between-sections)
+
 
 ## Colors
 
@@ -36,6 +37,7 @@ Color resources:
 * [Paletton](https://paletton.com/)
 * [HTML Color Codes](https://htmlcolorcodes.com/)
 
+
 ## Fonts
 
 Serif fonts:
@@ -52,6 +54,7 @@ Sans-serif fonts:
 Resources:
 
 * [Typewolf](https://www.typewolf.com/)
+
 
 ## CSS
 
@@ -82,6 +85,7 @@ npm install --save-dev webpack webpack-cli webpack-dev-server css-loader sass-lo
 
 ```
 
+
 ## Icons
 
 SVG formats are preferred. This imposes a IE 9+ / Android 3+ restriction. If you want to ensure browser support for older browsers, then icon fonts may be preferrable.
@@ -103,6 +107,7 @@ Resources:
 * [SVG Images in Django](https://stackoverflow.com/questions/25954797/svg-img-src-with-django)
 * [SVG Sprites](https://css-tricks.com/svg-sprites-use-better-icon-fonts/)
 * [Icon Fonts vs. SVGs](https://css-tricks.com/icon-fonts-vs-svg/)
+
 
 ## Python Code Style
 

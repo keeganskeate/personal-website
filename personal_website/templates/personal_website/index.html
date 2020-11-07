@@ -16,4 +16,15 @@
   <!-- Footer -->
   {% include "personal_website/layout/footer.html" %}
 
+  <!-- General JavaScript -->
+  <script>
+    (function scrollToHash () {
+      var hash = window.location.hash.substring(1);
+      var element = document.getElementById(hash);
+      if (element) {
+        element.scrollIntoView();
+      }
+    })();
+  </script>
+
 {% endblock %}

@@ -1,0 +1,1 @@
+# Sending Email with Firestore and Firebase Cloud Functions

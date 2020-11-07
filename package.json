@@ -10,13 +10,14 @@
     "productName": "Keegan Skeate"
   },
   "scripts": {
-    "build": "webpack",
-    "files": "python manage.py collectstatic",
+    "collectstatic": "python manage.py collectstatic --noinput",
     "lint": "python manage.py check",
     "dev": "start cmd.exe /k python manage.py runserver && python manage.py livereload",
     "dev-publish": "firebase deploy --only hosting:dev",
-    "obfuscate": "webpack --config obfuscate.config.js",
-    "publish": "firebase deploy --only hosting:production"
+    "publish": "npm run container && npm run cloud && npm run deploy",
+    "container": "npm run collectstatic && gcloud builds submit --tag gcr.io/keegan-skeate-website/personal-website",
+    "cloud": "gcloud run deploy keegan-skeate-website --image gcr.io/keegan-skeate-website/personal-website --region us-central1 --allow-unauthenticated --platform managed",
+    "deploy": "firebase deploy --project keegan-skeate-website"
   },
   "dependencies": {
     "@popperjs/core": "^2.5.3",

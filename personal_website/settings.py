@@ -18,7 +18,7 @@ except ImportError:
     pass
 
 PRODUCTION = False
-
+PROJECT_NAME = "personal_website"
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ROOT_URLCONF = "personal_website.urls"
 SETTINGS_NAME = "application_settings"
@@ -29,6 +29,7 @@ WSGI_APPLICATION = "personal_website.wsgi.application"
 # https://docs.djangoproject.com/en/3.1/ref/applications/
 #------------------------------------------------------------#
 INSTALLED_APPS = [
+    "crispy_forms",
     "livereload",  # Must be before django.contrib.staticfiles
     "django.contrib.admin",
     "django.contrib.auth",
@@ -37,6 +38,10 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
 ]
+CRISPY_TEMPLATE_PACK = "bootstrap4"
+
+if PRODUCTION:
+    INSTALLED_APPS.remove("livereload")
 
 #------------------------------------------------------------#
 # Middleware
@@ -53,6 +58,10 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 MIDDLEWARE_CLASSES = ("livereload.middleware.LiveReloadScript",)
+
+if PRODUCTION:
+    MIDDLEWARE.remove("livereload.middleware.LiveReloadScript")
+    MIDDLEWARE_CLASSES = ()
 
 #------------------------------------------------------------#
 # Templates
@@ -153,9 +162,7 @@ ALLOWED_HOSTS = [
     "personal-website.web.app",
 ]
 
-SECURE_SSL_REDIRECT = True
-if DEBUG:
-    SECURE_SSL_REDIRECT = False
+SECURE_SSL_REDIRECT = False
 
 #------------------------------------------------------------#
 # Database
@@ -175,19 +182,21 @@ DATABASES = {
     }
 }
 
+# If using SQL, setup for custom data migration.
+# if 'personal_website' not in INSTALLED_APPS:
+#    INSTALLED_APPS += ['personal_website']
+
 #------------------------------------------------------------#
 # Email
 # https://docs.djangoproject.com/en/3.1/topics/email/
 #------------------------------------------------------------#
-# EMAIL_HOST = 'smtp.gmail.com'
-# EMAIL_PORT = '587'
-# EMAIL_HOST_USER = env('EMAIL_HOST_USER')
-# EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')
-# EMAIL_USE_TLS = True
-
-# If using SQL, setup for custom data migration.
-# if 'personal_website' not in INSTALLED_APPS:
-#    INSTALLED_APPS += ['personal_website']
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = '587'
+EMAIL_HOST_USER = env('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = env('EMAIL_HOST_USER')
+LIST_OF_EMAIL_RECIPIENTS = [env('EMAIL_HOST_USER')]
 
 #------------------------------------------------------------#
 # Static files (CSS, JavaScript, Images)
@@ -206,8 +215,6 @@ STATIC_ROOT = os.path.abspath(
 
 # The relative path to serve files.
 STATIC_URL = "/static/"
-if DEBUG:
-    STATIC_URL = "/public/static/"
 
 #------------------------------------------------------------#
 # Google Cloud Storage alternative for serving static files

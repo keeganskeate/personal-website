@@ -1,8 +1,8 @@
 <!doctype html>
 <html>
-  {% load static %}
 
   <!-- Footer Template -->
+  {% load static %}
 
   <!-- Wave -->
   <div class="wave small blue" >
@@ -14,7 +14,7 @@
     <!-- Back to the top -->
   <a
     href="#"
-    class="font-weight-light text-secondary-on-light light-green-hover mr-3"
+    class="text-white font-weight-light light-green-hover mr-3"
     style="float:right;transform: translateY(-50px)"
   >
     <small>Back to the top</small>
@@ -30,22 +30,34 @@
         <!-- Logo -->
         <div class="col mx-6 mx-md-3">
           <div class="d-flex simple-column align-items-start flex-wrap">
-            <a class="navbar-brand simple-flex py-0" href="{% url 'index' %}">
-              <h3
-                class="footer-header brand-font text-white"
-                role="button"
+            <div class="simple-flex align-items-start">
+              <a
+                class="navbar-brand simple-flex py-0 mr-0"
+                href="{% url 'index' %}"
+                title="Homepage"
               >
-              {{ state.author }}
-              </h3>
-            </a>
+                <h3
+                  class="footer-header brand-font text-white"
+                  role="button"
+                >
+                {{ state.author }}
+                </h3>
+              </a>
+              <img
+                src="{% static 'personal_website/images/logos/butterfly_paint_logo.svg' %}"
+                class="mr-2"
+                height="75"
+                style="transform: translateY(-60%);"
+              >
+            </div>
             <a
-              class="text-light font-weight-light light-green-hover"
+              class="h5 text-white font-weight-light light-green-hover mb-0"
               href="tel:{{ state.phone_number }}"
             >
               <small>{{ state.phone }}</small>
             </a>
             <a
-              class="text-light font-weight-light light-green-hover"
+              class="h5 text-white font-weight-light light-green-hover"
               href="mailto:{{ state.email }}"
             >
               <small>{{ state.email }}</small>
@@ -53,38 +65,32 @@
           </div>
         </div>
 
-        <!-- Footer Index -->
+        <!-- Index -->
         {% for group in footer.index %}
           <div class="col mx-6 mx-md-3">
-            <h6 class="footer-header mb-3">
-              
-              <a
-                class="text-light font-weight-bold"
-                href="{% url group.slug %}"
-              >
-                {{ group.group }}
-              </a>
+            <h6 class="h5 footer-header text-light sans-serif mb-3 mt-2">
+              {{ group.group }}
             </h6>
             <ul class="list-unstyled text-small text-muted">
               {% for item in group.links %}
                 <li class="mb-1">
                 {% if item.path %}
                   <a
-                    class="text-light font-weight-light light-green-hover"
+                    class="text-white font-weight-light light-green-hover"
                     href="{% url item.url item.path %}"
                   >
                     {{ item.title }}
                   </a>
                 {% elif item.hashtag %}
                   <a
-                    class="text-light font-weight-light light-green-hover"
-                    href="{{ item.url }}#{{ item.hashtag }}"
+                    class="text-white font-weight-light light-green-hover"
+                    href="/{{ item.url }}#{{ item.hashtag }}"
                   >
                     {{ item.title }}
                   </a>
                 {% else %}
                   <a
-                    class="text-light font-weight-light light-green-hover"
+                    class="text-white font-weight-light light-green-hover"
                     href="{% url item.url %}"
                   >
                     {{ item.title }}
@@ -100,57 +106,55 @@
     </div>
 
     <!-- Copyright -->
-    <div class="container text-secondary-on-light">
-      {% comment %} <p class="h6 mb-3 float-right">
-        <small>
-          <a
-            class="font-weight-light text-secondary-on-light light-green-hover"
-            href="{% url 'privacy-policy' %}"
-          >
-            Privacy Policy
-          </a> |
-          <a
-            class="font-weight-light text-secondary-on-light light-green-hover"
-            href="{% url 'terms-of-service' %}"
-          >
-            Terms of Service
-          </a>
-        </small>
-      </p> {% endcomment %}
-      <p class="h6 font-weight-light mt-5">
+    <div class="container text-secondary-on-light px-5">
+      <p class="h6 text-light font-weight-light mt-5">
         <small>
           Made with 💖 in the PNW.
           This website is
           open source, so,<br> please
           <a
             href="https://github.com/keeganskeate/personal-website"
-            class="text-secondary-on-light light-green-hover"
+            class="text-white font-weight-bold light-green-hover"
           >
             download
           </a>
           and customize it for yourself!<br>
-          
+          Original illustrations by
+          <a
+            href="https://all-free-download.com"
+            class="text-white font-weight-bold light-green-hover"
+          >
+            all-free-download.com
+          </a>.
         </small>
       </p>
-    </div>
-    <div class="container text-secondary-on-light">
+      <p class="h6">
+        <small>
+          <a
+            class="text-white font-weight-light light-green-hover"
+            href="{% url 'privacy-policy' %}"
+          >
+            Privacy Policy
+          </a>
+        </small>
+      </p>
 
       <!-- Github, bug, and donate links --><!-- TODO: Seperate text -->
       <div class="float-right">
         <a href="https://github.com/keeganskeate/personal-website" class="mx-2">
-          <svg class="icon-secondary light-green-hover" version="1.1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 32 32">
+          <svg fill="#fff" class="light-green-hover" version="1.1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 32 32">
             <title>This site's source is on GitHub.</title>
             <path d="M16 0.395c-8.836 0-16 7.163-16 16 0 7.069 4.585 13.067 10.942 15.182 0.8 0.148 1.094-0.347 1.094-0.77 0-0.381-0.015-1.642-0.022-2.979-4.452 0.968-5.391-1.888-5.391-1.888-0.728-1.849-1.776-2.341-1.776-2.341-1.452-0.993 0.11-0.973 0.11-0.973 1.606 0.113 2.452 1.649 2.452 1.649 1.427 2.446 3.743 1.739 4.656 1.33 0.143-1.034 0.558-1.74 1.016-2.14-3.554-0.404-7.29-1.777-7.29-7.907 0-1.747 0.625-3.174 1.649-4.295-0.166-0.403-0.714-2.030 0.155-4.234 0 0 1.344-0.43 4.401 1.64 1.276-0.355 2.645-0.532 4.005-0.539 1.359 0.006 2.729 0.184 4.008 0.539 3.054-2.070 4.395-1.64 4.395-1.64 0.871 2.204 0.323 3.831 0.157 4.234 1.026 1.12 1.647 2.548 1.647 4.295 0 6.145-3.743 7.498-7.306 7.895 0.574 0.497 1.085 1.47 1.085 2.963 0 2.141-0.019 3.864-0.019 4.391 0 0.426 0.288 0.925 1.099 0.768 6.354-2.118 10.933-8.113 10.933-15.18 0-8.837-7.164-16-16-16z"></path>
           </svg>
         </a>
         <a href="https://github.com/keeganskeate/personal-website/issues" class="mx-2">
-          <svg class="icon-secondary light-green-hover" version="1.1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+          <svg fill="#fff" class="light-green-hover" version="1.1" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
             <title>File an issue about this site.</title>
             <path d="M15.3 14.89l2.77 2.77c0.18 0.181 0.291 0.43 0.291 0.705s-0.111 0.524-0.291 0.705l0-0c-0.181 0.18-0.43 0.291-0.705 0.291s-0.524-0.111-0.705-0.291l0 0-2.59-2.58c-0.825 0.765-1.872 1.303-3.034 1.505l-0.036 0.005v-8.96c0-0.552-0.448-1-1-1s-1 0.448-1 1v0 8.96c-1.198-0.207-2.245-0.744-3.074-1.513l0.004 0.003-2.59 2.58c-0.181 0.18-0.43 0.291-0.705 0.291s-0.524-0.111-0.705-0.291l0 0c-0.18-0.181-0.291-0.43-0.291-0.705s0.111-0.524 0.291-0.705l2.77-2.77c-0.298-0.547-0.518-1.183-0.626-1.856l-0.004-0.034h-3.070c-0.552 0-1-0.448-1-1s0.448-1 1-1v0h3v-2.59l-3.070-3.070c-0.18-0.181-0.291-0.43-0.291-0.705s0.111-0.524 0.291-0.705l-0 0c0.181-0.18 0.43-0.291 0.705-0.291s0.524 0.111 0.705 0.291l2.1 2.1h11.12l2.1-2.1c0.181-0.18 0.43-0.291 0.705-0.291s0.524 0.111 0.705 0.291l-0-0c0.18 0.181 0.291 0.43 0.291 0.705s-0.111 0.524-0.291 0.705l-3.070 3.070v2.59h3c0.552 0 1 0.448 1 1s-0.448 1-1 1v0h-3.070c-0.1 0.67-0.32 1.31-0.63 1.89zM15 5h-10c0-2.761 2.239-5 5-5s5 2.239 5 5v0z"></path>
           </svg>
         </a>
         <a href="https://keeganskeate.com/donate?q=5" class="mx-2">
-          <svg class="icon-secondary light-green-hover" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24">
+          <svg fill="#fff" class="light-green-hover" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 24 24" height="24" viewBox="0 0 24 24" width="24">
             <title>Buy me a coffee?</title>
             <g><rect fill="none" height="24" width="24"/></g>
             <g><g/>
@@ -165,11 +169,16 @@
 
       <!-- Made with Django-->
       <p>
-        <a href="http://www.djangoproject.com/"><img src="https://www.djangoproject.com/m/img/badges/djangomade124x25.gif" border="0" alt="Made with Django." title="Made with Django." /></a>
+        <a href="http://www.djangoproject.com/">
+          <img
+            src="https://www.djangoproject.com/m/img/badges/djangomade124x25.gif"
+            border="0"
+            alt="Made with Django."
+            title="Made with Django."
+          />
+        </a>
       </p>
 
     </div>
-
   </footer>
-
 </html>

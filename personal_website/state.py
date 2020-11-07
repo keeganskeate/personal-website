@@ -32,27 +32,36 @@ state = {
 homepage = {
     "blurb": "Economist, software developer, and data scientist currently available for employment. You can feel free to contact me anytime.",
     "hero": {
-        "action": "Hire me!",
-        "title": "Economist, software developer, and data scientist looking for work.",
-        "message": "With almost 9 years of economics, data science, and software development experience, I could begin building valuable assets for you immediately.",
+        "action": "Request a project",
+        "title": "Data scientist, software developer, and economist.",
+        "message": "With 9 years of economics, data science, and software development under my belt, I can create brilliant websites, software, and applications for you in a short amount of time.",
         "url": "/contact",
     },
     "featured_posts": [
         {
-            "category": "Python",
-            "title": "Creating a Django Website and Hosting it with Firebase",
-            "description": "Ever since I learned Python, I've wanted to create a website with Python. This site is built with Python Django and is open source, so, you can clone this website and tinker with it to your heart's content.",
-            "written_at": "Oct. 18, 2020",
-            "url": "posts/2020/10/18/creating-a-django-website-and-hosting-it-with-firebase",
+            "category": "Logo",
+            "title": "Logo for Myong Sae",
+            "description": "A logo designed for Myong Sae, Salon and Beauty Spa.",
+            "written_at": "Oct. 25, 2020",
+            "url": "posts/2020/10/25/myong-sae-logo",
         },
         {
-            "category": "Python",
-            "title": "Creating a Django Website and Hosting it with Firebase",
-            "description": "Ever since I learned Python, I've wanted to create a website with Python. This site is built with Python Django and is open source, so, you can clone this website and tinker with it to your heart's content.",
-            "written_at": "Oct. 18, 2020",
-            "url": "posts/2020/10/18/creating-a-django-website-and-hosting-it-with-firebase",
-        }
+            "category": "Website",
+            "title": "ETCH Mobility Website",
+            "description": "A Django website for a business to government business implementing action items of the Thurston County Climate Mitigation Plan.",
+            "written_at": "Oct. 25, 2020",
+            "url": "posts/2020/10/25/etch-mobility",
+        },
+        # {
+        #     "category": "Python",
+        #     "title": "Creating a Django Website and Hosting it with Firebase",
+        #     "description": "Ever since I learned Python, I've wanted to create a website with Python. This site is built with Python Django and is open source, so, you can clone this website and tinker with it to your heart's content.",
+        #     "written_at": "Oct. 18, 2020",
+        #     "url": "posts/2020/10/18/creating-a-django-website-and-hosting-it-with-firebase",
+        # },
     ],
+}
+posts = {
     "post_index": [
         {
             "title": "October 2020",
@@ -61,7 +70,7 @@ homepage = {
     ],
     "posts": [
         {
-            "title": "Creating a Django Website and Hosting it with Firebase",
+            "title": "Creating a Website with Python's Django and Hosting it with Firebase",
             "url": "posts/2020/10/18/creating-a-django-website-and-hosting-it-with-firebase",
             "written_at": "October 18th, 2020",
         },
@@ -70,7 +79,7 @@ homepage = {
 
 header = {
     "action": {
-        "title": "Free Software",
+        "title": "Portfolio",
         "url": "software",
     },
     "nav_items": [
@@ -84,7 +93,7 @@ header = {
         },
         {
             "slug": "posts",
-            "title": "Blog",
+            "title": "Writing",
         },
     ]
 }
@@ -92,7 +101,6 @@ header = {
 footer = {
     "index": [
         {
-            "slug": "posts",
             "group": "Recent Posts",
             "links": [
                 {
@@ -103,21 +111,47 @@ footer = {
             ],
         },
         {
-            "slug": "software",
-            "group": "Software",
+            "group": "Portfolio",
             "links": [
-                {"title": "CoverLetter AI", "url": "coverletter-ai"},
+                {
+                    "title": "Business Website",
+                    "url": "business-website",
+                },
+                {
+                    "title": "Cannlytics",
+                    "url": "cannlytics",
+                },
+                {
+                    "title": "CoverLetter AI",
+                    "url": "coverletter-ai",
+                },
+                {
+                    "title": "SkateClipper",
+                    "url": "skateclipper",
+                },
             ],
         },
         {
-            "slug": "about",
             "group": "About",
             "links": [
                 {
-                    "title": "Art",
+                    "title": "Story",
                     "url": "about",
-                    "path": "",
-                    "hashtag": "art",
+                    "hashtag": "story",
+                },
+                {
+                    "title": "Education",
+                    "url": "about",
+                    "hashtag": "education",
+                },
+                {
+                    "title": "Experience",
+                    "url": "about",
+                    "hashtag": "experience",
+                },
+                {
+                    "title": "Contact",
+                    "url": "contact",
                 },
             ],
         },

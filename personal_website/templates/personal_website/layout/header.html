@@ -19,14 +19,9 @@
   </button>
 
   <!-- Header Template -->
-  <nav class="navbar navbar-expand-lg navbar-light p-3 px-md-4">
-
-    <!-- Title -->
-    <a class="navbar-brand simple-flex" href="{% url 'index' %}">
-      <h5 class="my-0 mr-md-auto font-weight-normal brand-title">
-        {{ state.author }}
-      </h5>
-    </a>
+  <nav class="navbar navbar-expand-lg navbar-light p-3 px-md-4"
+    style="padding-right: 0 !important"
+  >
 
     <!-- Menu Toggle -->
     <button
@@ -41,13 +36,27 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
+    <!-- Title -->
+    <a class="navbar-brand simple-flex flex-grow grow" href="{% url 'index' %}">
+      <h5 class="my-0 mr-md-auto font-weight-normal brand-title">
+        {{ state.author }}
+      </h5>
+    </a>
+
+    <!-- Smallscreen helper -->
+    <div class="d-block d-lg-none"></div>
+
     <!-- Navigation Options -->
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav">
+    <div
+      id="navbarNavDropdown"
+      class="collapse navbar-collapse"
+      style="justify-content:flex-end"
+    >
+      <ul class="navbar-nav mr-2">
         {% for item in header.nav_items %}
-          <li class="nav-item">
+          <li class="nav-item h6 mb-0">
             <a
-              class="nav-link {% if item.slug in request.path %} active{% endif %}"
+              class="nav-link text-dark {% if item.slug in request.path %} active{% endif %}"
               href="{% url item.slug %}"
             >
               {{ item.title }}
@@ -58,7 +67,7 @@
         <!-- Action Button for Small Screens -->
         <li class="nav-item d-lg-none mt-2">
           <a
-            class="nav-link btn btn-outline-primary px-2"
+            class="nav-link btn btn-primary px-2"
             href="{% url header.action.url %}"
             style="display:unset"
           >
@@ -72,11 +81,32 @@
     <!-- Action Button for large screens -->
     <a
       type="button"
-      class="btn btn-outline-primary d-none d-lg-block"
+      class="btn btn-primary d-none d-lg-block"
       href="{% url header.action.url %}"
     >
       {{ header.action.title }}
     </a>
+    {% comment %} <ul class="navbar-nav float-right">
+      {% for item in header.nav_items %}
+        <li class="nav-item font-weight-bold">
+          <a
+            class="nav-link {% if item.slug in request.path %} active{% endif %}"
+            href="{% url item.slug %}"
+          >
+            {{ item.title }}
+          </a>
+        </li>
+      {% endfor %}
+      <li class="nav-item">
+        <a
+          type="button"
+          class="btn btn-outline-primary d-none d-lg-block"
+          href="{% url header.action.url %}"
+        >
+          {{ header.action.title }}
+        </a>
+      </li>
+    </ul> {% endcomment %}
 
   </nav>
 

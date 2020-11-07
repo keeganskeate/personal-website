@@ -1,10 +1,17 @@
 <!-- Privacy Page -->
 {% extends "personal_website/index.html" %}
 
+<!-- Title -->
+{% block title %}Privacy | {{ state.author }}{% endblock %}
+
 {% block material %}
   <div class="privacy">
-    
-    <!-- TODO: Load markdown -->
-
+    <main role="main" class="container py-3 my-3">
+      <div class="d-flex mt-auto justify-content-center flex-wrap-reverse">
+        <div class="col-md-8 pb-5 markdown">
+          {{ markdown | safe }}
+        </div>
+      </div>
+    </main>
   </div>
 {% endblock %}

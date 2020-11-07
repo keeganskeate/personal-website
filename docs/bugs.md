@@ -4,10 +4,19 @@
 
   > Be sure to close the console before running `npm install -g npm@latest` a second time.
 
+
+## Django Errors
+
+* [Django stops working with RuntimeError: populate() isn't reentrant](https://stackoverflow.com/questions/27093746/django-stops-working-with-runtimeerror-populate-isnt-reentrant)
+
+* [<site-name> redirected you too many times.](https://stackoverflow.com/questions/55726610/django-ssl-redirection-on-heroku-too-many-redirects)
+
+
 ## Github Errors
 
 * [You have not concluded your merge (MERGE_HEAD exists)](https://stackoverflow.com/questions/11646107/you-have-not-concluded-your-merge-merge-head-exists)
 * [Your branch and 'origin/master' have diverged](https://stackoverflow.com/questions/29544660/your-branch-and-origin-master-have-diverged-all-conflicts-fixed-but-you-are-s)
+
 
 ## Firebase Errors
 

@@ -1,34 +1,12 @@
 {
   "hosting": [
     {
-      "site": "keegan-skeate-website-dev",
-      "target": "dev",
-      "public": "public",
-      "ignore": [
-        "firebase.json",
-        "**/.*",
-        "**/node_modules/**",
-        "**/development/**"
-      ],
-      "rewrites": [
-        {
-          "source": "**",
-          "run": {
-            "serviceId": "keegan-skeate-website",
-            "region": "us-central1"
-          }
-        }
-      ]
-    },
-    {
       "site": "keegan-skeate-website",
-      "target": "production",
       "public": "public",
       "ignore": [
         "firebase.json",
         "**/.*",
-        "**/node_modules/**",
-        "**/development/**"
+        "**/node_modules/**"
       ],
       "rewrites": [
         {

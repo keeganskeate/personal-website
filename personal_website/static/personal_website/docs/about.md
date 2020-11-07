@@ -1,62 +1,70 @@
-<h1 class="pb-4 mb-4 font-italic border-bottom">
+<h1 class="pb-2 mb-4 border-bottom">
   About
 </h1>
-<!-- TODO: Profile image -->
 
-My name is Keegan Skeate and I am an economist, software developer, data scientist, and laboratory analyst.
+<img
+  src="../static/personal_website/images/profile/profile.jpg"
+  width="155"
+  height="175"
+  class="float-right mx-3"
+  style="border-radius:50%;"
+/>
 
-Keegan has recently earned a Masters in Economics from the University of California, Irvine, and before this he earned a Bachelors and Masters in Economics from the University of North Carolina at Charlotte. During his graduate studies, Keegan wrote a master's thesis that examines how families change their charitable giving behavior in response to charitable donations made by their reference group members. Keegan has also completed two professional internships. First, he helped to implement an enterprise software system for Kimbrell's Furniture. Second, he found cost saving vendor opportunities in the purchasing department of the University of North Carolina at Charlotte.
+My name is Keegan Skeate and I am an economist, software developer, and data scientist. I have even worked as a laboratory analyst performing a wide range of analyses on cannabis. I have earned two master's in economics, one from the [University of North Carolina, Charlotte](https://www.uncc.edu/) and the second from the [University of California, Irvine](https://uci.edu/). My career objective is to contribute ideas, knowledge, and skills to help build and create meaningful projects, tools, and systems.
+
 
 ## Story
 
-Keegan Skeate is a business analyst who has earned a master's in economics from the University of California, Irvine and a master's in economics from the University of North Carolina, Charlotte.
+I started my education as a business student at [AB Tech](https://abtech.edu/) in Asheville, North Carolina. A great finance instructor inspired me to apply to UNC Charlotte, where I was accepted and decided to major in economics. I graduated with a Bachelors of Science in Economics and summa cum laude (with a 4.0 GPA) through diligent work.
 
-As a financial analyst at Kimbrell's Furniture Inc. Keegan helped implement an enterprise resource planning (ERP) system that manages more than $40 million in accounts receivable and $8 million in inventory for 43 retail locations in 3 states. As a spend analyst in the purchasing department at the University of North Carolina, Charlotte Keegan utilized an industry–specific analytics program to find cost–saving opportunities.
+Next, I applied to applied to UNC Charlotte's [graduate school](https://graduateschool.uncc.edu/). I was accepted and earned a Masters in Economics in record-time by writing a master's thesis while taking coursework.
 
-Keegan has also given an award–winning economics presentation on charitable giving.
+I then applied and was accepted into the University of California, Irvine Ph.D. in Economics program. I excelled in microeconomics and econometrics, earning top-marks on the microeconomic comprehensive exam and was awarded the [Judges' Winner in Economics]((https://symposium.ags.uci.edu/2016-winners-abstracts/)) at the 2016 Graduate Student Symposium. Unfortunately, I did not pass the macroeconomic comprehensive and my education concluded with a second masters in economics.
 
-## Career Objective
-
-Keegan's career objective is to work as a business analyst for an innovative company where he can contribute his ideas, knowledge, and skills to help execute meaningful projects.
 
 ## Education
 
-M.A. in Economics
-University of California at Irvine
-December 2016
+I earned a B.S. in Economics from the University of North Carolina at Charlotte in May of 2014. While earning my bachelor's degree, I began learning how to estimate economic models and forecast with SAS and Stata. After three years of study, I graduated Summa Cum Laude.
 
-During his graduate studies, Keegan wrote Bayesian algorithms, fit advanced economic models, and forecasted outcomes with Python, MATLAB, and Stata. Keegan also presented a working paper at UC Irvine's 2016 Associated Graduate Students Symposium and was awarded the [Judge's Winner in Economics](https://symposium.ags.uci.edu/2016-winners-abstracts/).
+I earned a M.S. in Economics from the University of North Carolina at Charlotte in June 2015. I began learning the Python programming language and applying it to solve problems in advanced computational economics. From demonstrating proficiency in economics, I was invited and accepted into [Omicron Delta Epsilon](http://www.omicrondeltaepsilon.org/): The International Economics Honor Society. I completed my first master's degree by defending a [master's thesis](http://gradworks.umi.com/15/98/1598090.html) on tax policies for charitable donations.
 
-M.S. in Economics
-University of North Carolina at Charlotte
-December 2015
+I earned a M.A. in Economics from the University of California at Irvine in December 2016. During my graduate studies, I wrote Bayesian algorithms, fit advanced economic models, and forecasted outcomes with Python, MATLAB, and Stata. I also presented a working paper at UC Irvine's 2016 Associated Graduate Students Symposium and was awarded the [Judge's Winner in Economics](https://symposium.ags.uci.edu/2016-winners-abstracts/).
 
-Keegan began learning the Python programming language and applying it to advanced computational economics. From demonstrating proficiency in economics, Keegan was invited and accepted into [Omicron Delta Epsilon](http://www.omicrondeltaepsilon.org/): The International Economics Honor Society. Keegan completed his first master's degree by defending a [master's thesis](http://gradworks.umi.com/15/98/1598090.html) on tax policies for charitable donations.
+During my graduate studies, I wrote [a master's thesis](../static/personal_website/pdfs/thesis.pdf) that examines how families change their charitable giving behavior in response to charitable donations made by their reference group members. I also gave an award-winning economics presentation on charitable giving.
 
-B.S. in Economics
-University of North Carolina at Charlotte
-May 2014
-
-While earning his bachelor's degree, Keegan began learning how to estimate economic models and forecast with SAS and Stata. After three years of study, Keegan graduated Summa Cum Laude.
 
 ### Teaching Experience
 
-Keegan has served as teaching assistant for Amihai Glazer's Corporate Governance, Jiawei Chen's Intermediate Economics I, Brian C. Jenkins' Intermediate Economics III, and Ellen Sewell's Principles of Microeconomics, Intermediate Microeconomics, and Industrial Organization and Public Policy.
+When I was a graduate student, I has served as teaching assistant for several fantastic professors and courses.
+
+- Professor Ellen Sewell's Principles of Microeconomics, Intermediate Microeconomics, and Industrial Organization and Public Policy.
+- Professor Amihai Glazer's Corporate Governance
+- Professor Jiawei Chen's Intermediate Economics I
+- Professor Brian C. Jenkins' Intermediate Economics III
+
 
 ### Research Experience
 
-Keegan aided Paul Gaggl in his research on the distributional effect on wages from electricity adoption in the early 20th century, and assisted Ellen Sewell in her research on fixed book price laws in Europe and the welfare implications of resale price maintenance. Furthermore, Keegan has conducted original research on the motivations for families in the United States to give to charity.
+I aided Professor Paul Gaggl in his research on the distributional effect on wages from electricity adoption in the early 20th century and assisted Ellen Sewell in her research on fixed book price laws in Europe and the theoretical welfare implications of resale price maintenance. I also conducted original research on the motivations for families in the United States to give to charity.
+
+
+## Finance Experience
+
+I have completed two professional internships. First, I helped to implement an enterprise software system for [Kimbrell's Furniture](https://kimbrells.com/) that manages more than $40 million in accounts receivable and $8 million in inventory for their 43+ retail locations in 3 states.
+
+Second, I found cost-saving vendor opportunities in the purchasing department of the University of North Carolina at Charlotte as a spend analyst by utilizing an industry-specific analytics program. I compiled data, performed data analysis, and charted trends in commodity prices, helping senior purchasing agents make optimal vendor choices.
+
 
 ## Analyst Experience
 
-Spend Analyst
-University of North Carolina at Charlotte
-September 2013 – December 2013
+I started as a Laboratory Analyst at Praxis Laboratory and The Institute of Food Safety and Defense where I conducted analyses on a wide reange of cannabis products. In April of 2018, I was promoted to Software Developer. In January of 2020, Data Scientist was added to my title. As a software developer, I developed a laboratory information management system (LIMS) application that collects, analyzes, and reports data for more than 80,000 laboratory tests per year, as well as a client portal web application that more than 300 cannabis producers and processors use to access their laboratory results. I automated all interactions with the Washington State cannabis traceability system and the majority of routine or administrative laboratory tasks, including scheduling, sample reception, data collection and analysis, certificate creation, and result reporting. Additionally, I created weekly, monthly, and quarterly reports to provide detailed statistics of all laboratory testing data collected and interpretations of trends, patterns, and key performance indicators.
 
-In the purchasing department at UNC Charlotte, Keegan pioneered [SpendCompass](http://www.ncleg.net/Documentsites/committees/HSCEP/2012-02-15/SLIDES-UNCC%20Spend%20Compass%20Mayer%20Electric%20Case%20Study%20Slides.pdf), a powerful spend analytics program. SpendCompass is used in tandem with Microsoft Excel to compile data, perform analysis, and identify areas for cost reduction. Keegan aided senior purchasing agents in making optimal vendor choices by providing information on trends in commodity prices.
 
-Financial Analyst
-Kimbrell's Furniture Distributors, Inc.
-May 2013 – September 2013
+## Current projects
 
-Keegan played an important role in the successful implementation of [Storis Vision9](https://www.storis.com/storis-erp-software/), an industry–specific enterprise resource planning (ERP) system, that manages more than $40 million in accounts receivable and $8 million in inventory for Kimbrell's 43 locations in 3 states.
+Currently, I am working on websites, apps, graphic design with many great tools, including Python, Flutter, and the web stack. Please explore the following works in progress:
+
+<!-- TODO: Add Images and descriptions -->
+- [Cannlytics](https://cannlytics.com)
+- [CoverLetter AI](https://covletterai.com)
+- [SkateClipper](https://skateclipper.com)

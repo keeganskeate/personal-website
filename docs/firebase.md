@@ -8,9 +8,8 @@ You will need your Firebase project ID, database region, and storage bucket name
 
 > <a name="storage-bucket">*</a> A storage bucket is used by the Secret Manager. The same or a different storage bucket can optionally be used to serve static files for your deployed site.
 
-<!-- ## Use Cases
-TODO: Write blog posts
-- Sending Email with Firestore and Firebase Cloud Functions
-- Storing template state data in Firestore
-- Storing files for user's to download in Firebase Storage
--->
+## Potential use cases
+
+- Sending Email with Firestore and Firebase Cloud Functions.
+- Storing template data in Firestore.
+- Storing files for user's to download in Firebase Storage.

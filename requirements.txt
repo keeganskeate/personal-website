@@ -3,15 +3,17 @@
 # run 'pip freeze > requirements.txt' in the terminal to overwrite this file.
 
 black
+dj_static
+django==3.0.7
+django-crispy-forms
+django-environ==0.4.5
+django-livereload-server
+django-storages[google]==1.9.1
+firebase_admin==4.3.0
 google-auth==1.20.1
 google-cloud-secret-manager==1.0.0
 gunicorn==20.0.4
-dj_static
-django==3.0.7
-django-environ==0.4.5
-django-storages[google]==1.9.1
-firebase_admin==4.3.0
-livereload==2.6.3
+# livereload==2.6.3
 Markdown==3.2.2
 markdown-markup-emoji==0.2.2 # FIXME: Not working
 # sphinx-markdown-parser
