@@ -13,8 +13,9 @@ Directories:
 
 * `.admin` - Project secrets (Keep secure. Do NOT upload to a public repository.)
 * `assets` - All original assets; images, PDFs, etc.
-* `personal_website` - Main app.
+* `docs` - All documentation for development.
 * `node_modules` - Node.js packages.
+* `personal_website` - Main app.
 * `static` - Where static files are served, uploaded to hosting.
 * `templates` - Django HTML templates for all apps.
 * `utils` - Python utility (helper) functions.

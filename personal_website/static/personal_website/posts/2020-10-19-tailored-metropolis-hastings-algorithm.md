@@ -1,3 +1,0 @@
-# Tailored Metropolis-Hastings Algorithm
-
-Business are often confronted with situations where one of two possibilities may occur, and may find it strategic to estimate the probability of each outcome. The Metropolis-Hastings algorithm, an advanced Markov chain Monte Carlo method that simulates draws from a Bayesian posterior distribution, is a powerful tool that can be applied for this purpose. Given observed data and a proposed model, the method generates a probability distribution for the model parameters. An example is provided that fits a logit model, which can be used to model binary choices. Business may find this model useful for its power in predicting the likelihood of each of two alternatives occuring.

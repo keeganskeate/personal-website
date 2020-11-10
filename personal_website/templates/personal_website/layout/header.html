@@ -69,7 +69,6 @@
           <a
             class="nav-link btn btn-primary px-2"
             href="{% url header.action.url %}"
-            style="display:unset"
           >
             {{ header.action.title }}
           </a>
@@ -112,14 +111,13 @@
 
   <!-- Header Functionality -->
   <script>
-    function toggleTheme() {
-      var element = document.body;
-      element.classList.toggle('dark');
-    }
-
     var hours = new Date().getHours();
     var dayTime = hours > 6 && hours < 20;
-    if (!dayTime) toggleTheme('dark');
+    if (!dayTime) {
+      document.body.classList.toggle('dark');
+    }
+    // DEV:
+    document.body.classList.add('dark');
 
   </script>
 

@@ -6,7 +6,7 @@
 <!-- Page title -->
 {% block title %}Welcome | {{ state.author }}{% endblock %}
 
-  <!-- Page styles -->
+<!-- Page styles -->
 {% block page_css %}
   <link href="{% static 'personal_website/css/blog.css'%}" rel="stylesheet" type="text/css">
 {% endblock %}
@@ -47,70 +47,42 @@
       </div>
       <div class="col no-grow mb-5">
         <img
-          src="{% static 'personal_website/images/illustrations/brilliant_ideas.svg' %}?{% now "U" %}"
+          src="{% static 'personal_website/images/illustrations/brilliant_ideas.svg' %}"
           width="500"
           style="background-position:top left;"
         >
       </div>
     </div>
   </div><!-- End of Hero -->
-  {% comment %} <div class="jumbotron p-0 p-md-5 rounded"
-    style="background-image:url('{% static 'personal_website/images/backgrounds/blocks.svg' %}');background-color:transparent;background-size:contain;background-repeat:no-repeat;background-position:top center;"
-  >
-    <div class="col-md-6 p-4 bg-white-dynamic">
-      <h1 class="display-4 font-italic">
-        {{ homepage.hero.title }}
-      </h1>
-      <p class="lead my-3">
-        {{ homepage.hero.message }}
-      </p>
-      <p class="lead mb-0">
-        <a
-          href="{{ homepage.hero.url }}"
-          class="font-weight-bold"
-        >
-          {{ homepage.hero.action }}
-        </a>
-      </p>
-    </div>
-  </div> {% endcomment %}
 
-  <!-- Featured posts -->
+  <!-- Featured portfolio -->
   <div class="ground">
   <div class="container pb-0 p-lg-5">
     <div class="row">
-      {% for item in homepage.featured_posts %}
+      {% for item in portfolio %}
         <div class="col-md-6">
-          <div class="row card no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm position-relative">
-            <div class="col p-4 d-flex flex-column position-static">
-              <strong class="d-inline-block mb-2 text-success">
-                {{ item.category }}
-              </strong>
-              <h3 class="text-dark">
-                {{ item.title }}
-              </h3>
-              {% comment %} <div class="mb-1 text-muted">
-                {{ item.written_at }}
-              </div> {% endcomment %}
-              <p class="card-text text-muted mb-auto">
-                {{ item.description }}
-              </p>
-              {% comment %} <a
-                href="{{ item.url }}"
-                class="stretched-link"
-              >
-                Continue reading
-              </a> {% endcomment %}
+          <a class="simple-action" href="{{ item.url }}">
+            <div class="row card no-gutters border rounded overflow-hidden flex-md-row mb-4 shadow-sm position-relative">
+              <div class="col p-4 d-flex flex-column position-static">
+                <h3 class="text-dark">
+                  {{ item.title }}
+                </h3>
+                <img
+                  src="{% static item.image %}"
+                  style="width:auto; width:300px; align-self:center;"
+                  class="my-2"
+                >
+                <p class="card-text text-dark mb-auto">
+                  {{ item.description }}
+                </p>
+              </div>
             </div>
-            <div class="col-auto d-none d-lg-block">
-              <svg class="bd-placeholder-img" width="200" height="250" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-            </div>
-          </div>
+          </a>
         </div>
       {% endfor %}
     </div>
   </div>
-  </div><!-- End of featured posts -->
+  </div><!-- End of featured portfolio -->
 
   <!-- Wave -->
   <div class="wave small upside-down" >
@@ -126,7 +98,7 @@
   </div>
 
   <!-- Post Index -->
-  <main role="main" class="container pt-5">
+  <main role="main" class="container">
     <div class="row">
       <div class="col-md-8 blog-main">
         <h3 class="pb-2 mb-4 font-italic border-bottom">
@@ -137,7 +109,7 @@
         {% for post in posts.posts %}
 
           <div class="blog-post">
-            <a href="{{ page.url }}">
+            <a href="{{ post.url }}">
               <h2 class="blog-post-title">
                 {{ post.title }}
               </h2>
@@ -145,8 +117,9 @@
             <p class="blog-post-meta">
               {{ post.written_at }}
             </p>
-            <!-- Post body -->
-            <!-- TODO: Load Markdown -->
+            <p>
+              {{ post.description }}
+            </p>
 
           </div><!-- /.blog-post -->
 
@@ -181,7 +154,7 @@
           </p>
         </div>
 
-        <div class="p-4">
+        {% comment %} <div class="p-4">
           <h4 class="font-italic">Posts</h4>
           <ol class="list-unstyled mb-0">
             {% for item in homepage.post_index %}
@@ -190,7 +163,7 @@
               </li>
             {% endfor %}
           </ol>
-        </div>
+        </div> {% endcomment %}
 
         <!-- Social links --><!-- TODO: Add icons -->
         <div class="p-4">
@@ -203,9 +176,7 @@
         </div>
 
       </aside><!-- /.blog-sidebar -->
-
     </div><!-- /.row -->
-
   </main><!-- /.container -->
 
 {% endblock %}

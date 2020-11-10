@@ -1,0 +1,1 @@
+# Storing Django Template Data in Firestore

@@ -107,6 +107,7 @@ Resources:
 * [SVG Images in Django](https://stackoverflow.com/questions/25954797/svg-img-src-with-django)
 * [SVG Sprites](https://css-tricks.com/svg-sprites-use-better-icon-fonts/)
 * [Icon Fonts vs. SVGs](https://css-tricks.com/icon-fonts-vs-svg/)
+* [Gemoji](https://github.com/facelessuser/pymdown-extensions/blob/master/pymdownx/gemoji_db.py)
 
 
 ## Python Code Style

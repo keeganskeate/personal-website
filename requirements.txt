@@ -16,6 +16,8 @@ gunicorn==20.0.4
 # livereload==2.6.3
 Markdown==3.2.2
 markdown-markup-emoji==0.2.2 # FIXME: Not working
+pymdownx
+pygments
 # sphinx-markdown-parser
 # pymdown-extensions
 # recommonmark
@@ -23,3 +25,4 @@ markdown-markup-emoji==0.2.2 # FIXME: Not working
 # sphinx-intl
 python-decouple==3.3
 psycopg2-binary==2.8.5
+python-markdown-math

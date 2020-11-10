@@ -51,16 +51,16 @@
               >
             </div>
             <a
-              class="h5 text-white font-weight-light light-green-hover mb-0"
+              class="text-white font-weight-light light-green-hover mb-0"
               href="tel:{{ state.phone_number }}"
             >
-              <small>{{ state.phone }}</small>
+              {{ state.phone }}
             </a>
             <a
-              class="h5 text-white font-weight-light light-green-hover"
+              class="text-white font-weight-light light-green-hover"
               href="mailto:{{ state.email }}"
             >
-              <small>{{ state.email }}</small>
+              {{ state.email }}
             </a>
           </div>
         </div>
@@ -128,8 +128,9 @@
           </a>.
         </small>
       </p>
-      <p class="h6">
+      <p class="h6 text-light">
         <small>
+          Copyright © 2020 Keegan Skeate | 
           <a
             class="text-white font-weight-light light-green-hover"
             href="{% url 'privacy-policy' %}"

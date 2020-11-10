@@ -1,0 +1,45 @@
+{% extends "personal_website/index.html" %}
+
+<!-- Title -->
+{% block title %}Portfolio | {{ state.author }}{% endblock %}
+
+{% load static %}
+
+<!-- Posts Template -->
+{% block material %}
+  <main role="main" class="container">
+
+    <!-- Features -->
+    <div class="container marketing features">
+      {% for item in portfolio %}
+        <div
+          class="row featurette"
+          style="margin-top:5rem;margin-bottom:5rem;"
+        >
+          <div class="col-md-7">
+            <h2 class="featurette-heading large-line mt-0">
+              {{ item.title }}
+            </h2>
+            <p class="lead double-line">
+              {{ item.description }}
+            </p>
+            {% if item.link %}
+              <p class="lead mb-0 mt-2">
+                <a href="{{ item.link }}" class="font-weight-bold">
+                  Check it out →
+                </a>
+              </p>
+            {% endif %}
+          </div>
+          <div class="col-md-5">
+            <img
+              src="{% static item.image %}"
+              width="100%"
+            >
+          </div>
+        </div>
+      {% endfor %}
+    </div><!-- End of Features -->
+
+  </main>
+{% endblock %}

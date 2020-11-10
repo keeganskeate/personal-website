@@ -1,6 +1,6 @@
 # Installation
 
-The personal website works right out of the box, however, it is recommended to setup your own credentials for deploying to production. The personal website uses Firebase by default for many back-end services. As you are free to modify anything, you are welcome to modify the personal website to use the back-end services of your choice.
+The personal website works right out of the box, however, it is recommended to setup your own credentials for deploying to production. The personal website uses [Firebase](https://console.firebase.google.com/) by default for many back-end services. As you are free to modify anything, you are welcome to modify the personal website to use the back-end services of your choice.
 
 * [Getting started](#getting-started)
 * [Credentials](#credentials)

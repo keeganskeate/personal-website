@@ -33,36 +33,40 @@ I earned a M.A. in Economics from the University of California at Irvine in Dece
 During my graduate studies, I wrote [a master's thesis](../static/personal_website/pdfs/thesis.pdf) that examines how families change their charitable giving behavior in response to charitable donations made by their reference group members. I also gave an award-winning economics presentation on charitable giving.
 
 
-### Teaching Experience
+## Teaching Experience
 
 When I was a graduate student, I has served as teaching assistant for several fantastic professors and courses.
 
-- Professor Ellen Sewell's Principles of Microeconomics, Intermediate Microeconomics, and Industrial Organization and Public Policy.
+- Professor Ellen Sewell's Principles of Microeconomics, Intermediate Microeconomics, and Industrial Organization and Public Policy
 - Professor Amihai Glazer's Corporate Governance
 - Professor Jiawei Chen's Intermediate Economics I
 - Professor Brian C. Jenkins' Intermediate Economics III
 
 
-### Research Experience
+## Research Experience
 
-I aided Professor Paul Gaggl in his research on the distributional effect on wages from electricity adoption in the early 20th century and assisted Ellen Sewell in her research on fixed book price laws in Europe and the theoretical welfare implications of resale price maintenance. I also conducted original research on the motivations for families in the United States to give to charity.
+I aided Professor Paul Gaggl in his research on the distributional effect on wages from electricity adoption in the early 20th century and assisted Professor Ellen Sewell in her research on fixed book price laws in Europe and the theoretical welfare implications of resale price maintenance. I also conducted original research on the motivations for families in the United States to give to charity.
 
 
 ## Finance Experience
 
-I have completed two professional internships. First, I helped to implement an enterprise software system for [Kimbrell's Furniture](https://kimbrells.com/) that manages more than $40 million in accounts receivable and $8 million in inventory for their 43+ retail locations in 3 states.
+I have completed two professional internships. First, I helped to implement an enterprise software system for [Kimbrell's Furniture](https://kimbrells.com/) that manages more than $40 million in accounts receivable and $8 million in inventory for their 45 retail locations in 3 states.
 
 Second, I found cost-saving vendor opportunities in the purchasing department of the University of North Carolina at Charlotte as a spend analyst by utilizing an industry-specific analytics program. I compiled data, performed data analysis, and charted trends in commodity prices, helping senior purchasing agents make optimal vendor choices.
 
 
 ## Analyst Experience
 
-I started as a Laboratory Analyst at Praxis Laboratory and The Institute of Food Safety and Defense where I conducted analyses on a wide reange of cannabis products. In April of 2018, I was promoted to Software Developer. In January of 2020, Data Scientist was added to my title. As a software developer, I developed a laboratory information management system (LIMS) application that collects, analyzes, and reports data for more than 80,000 laboratory tests per year, as well as a client portal web application that more than 300 cannabis producers and processors use to access their laboratory results. I automated all interactions with the Washington State cannabis traceability system and the majority of routine or administrative laboratory tasks, including scheduling, sample reception, data collection and analysis, certificate creation, and result reporting. Additionally, I created weekly, monthly, and quarterly reports to provide detailed statistics of all laboratory testing data collected and interpretations of trends, patterns, and key performance indicators.
+I started as a Laboratory Analyst at Praxis Laboratory and The Institute of Food Safety and Defense where I conducted analyses on a wide reange of cannabis products. In April of 2018, I was promoted to Software Developer. In January of 2020, Data Scientist was added to my title.
+
+As a software developer, I developed a laboratory information management system (LIMS) application that collects, analyzes, and reports data for more than 80,000 laboratory tests per year, as well as a client portal web application that more than 300 cannabis producers and processors use to access their laboratory results. I automated all interactions with the Washington State cannabis traceability system and the majority of routine or administrative laboratory tasks, including scheduling, sample reception, data collection and analysis, certificate creation, and result reporting.
+
+Additionally, I created weekly, monthly, and quarterly reports to provide detailed statistics of all laboratory testing data collected and interpretations of trends, patterns, and key performance indicators.
 
 
 ## Current projects
 
-Currently, I am working on websites, apps, graphic design with many great tools, including Python, Flutter, and the web stack. Please explore the following works in progress:
+Currently, I am working on websites, apps, and graphic design with many great tools, including Python, Flutter, and the web stack. Please explore the following works in progress:
 
 <!-- TODO: Add Images and descriptions -->
 - [Cannlytics](https://cannlytics.com)

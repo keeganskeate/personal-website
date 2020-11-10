@@ -107,10 +107,12 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: .5rem;
 }
 body.dark .markdown a {
-  color: #45B649;
+  /* color: #45B649; */
+  color: #8be8fd;
 }
 body.dark .markdown a:hover {
-  color: #96e6a1;
+  /* color: #96e6a1; */
+  color: #8be8fd;
 }
 
 /*--------------------------------------------------------------------------
@@ -323,11 +325,19 @@ a.kls-dark-orange-text:hover {
 	background: transparent;
 	/* transition: width .25s ease, background-color .25s ease; */
 }
-.nav-link:hover:after,
-.nav-link.active:after {
-	width: 100%;
-	background: #007bff;
+@media (min-width: 992px) {
+  .nav-link:hover:after,
+  .nav-link.active:after {
+    width: 100%;
+    background: #007bff;
+  }
+  body.dark .nav-link:hover:after,
+  body.dark .nav-link.active:after {
+    width: 100%;
+    background: #8be8fd;
+  }
 }
+
 .app-action {
   cursor: pointer !important;
 }
@@ -335,7 +345,7 @@ a.kls-dark-orange-text:hover {
   cursor: default !important;
 }
 .simple-action {
-  text-decoration: none;
+  text-decoration: none !important;
 }
 .sliding-action {
 	display: inline-block;
@@ -423,6 +433,9 @@ a.kls-dark-orange-text:hover {
 }
 svg.text-light {
   fill: #ccc !important;
+}
+.gemoji {
+  height: 2rem !important;
 }
 
 /*--------------------------------------------------------------------------
@@ -597,7 +610,8 @@ body.dark .ground {
 ---------------------------------------------------------------------------*/
 
 body.dark {
-  background: #281e52;
+  /* background: #281e52; */
+  background-color: #323443;
 }
 body.dark p,
 body.dark h1,
@@ -621,6 +635,9 @@ body.dark ul,
 body.dark .text-dark,
 body.dark .textarea {
   color: #ccc !important;
+}
+body.dark .text-white {
+  color: #fff !important;
 }
 body.dark .personal-green-text:hover {
   color: #96e6a1;
@@ -655,11 +672,17 @@ body.dark p.lead a {
 body.dark p.lead a:hover {
   color: #96e6a1;
 }
+body.dark a {
+  /* text-decoration-color: #96e6a1; */
+  text-decoration-color: #8be8fd;
+}
 body.dark .form-control,
 body.dark .custom-control-input,
 body.dark .custom-control-label:before {
-  background-color: #554b80 !important;
-  border-color: #090421 !important;
+  /* background-color: #554b80 !important; */
+  /* border-color: #090421 !important; */
+  background-color: rgb(248 248 242 / 7%) !important;
+  border-color: #1e2029;
 }
 body.dark .bg-light,
 body.dark .card {
