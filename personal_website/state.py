@@ -78,7 +78,7 @@ posts = {
         {
             "title": "Creating a Website with Python's Django and Hosting it with Firebase",
             "url": "/posts/creating-a-python-django-website-and-hosting-it-with-firebase",
-            "written_at": "October 18th, 2020",
+            "written_at": "November 10th, 2020",
             "description": "Ever since I learned Python, I've wanted to create a website with Python. This site is built with Python Django and is open source, so, you can clone this website and tinker with it to your heart's content.",
         },
     ]
@@ -108,11 +108,12 @@ header = {
 footer = {
     "index": [
         {
-            "group": "Recent Posts",
+            "group": "Writing",
             "links": [
                 {
                     "title": "Creating a Python Django Website and Hosting it with Firebase",
                     "url": "posts",
+                    # "url": "posts/creating-a-python-django-website-and-hosting-it-with-firebase",
                     # "url": "/posts/creating-a-django-website-and-hosting-it-with-firebase",
                     # "hashtag": "",
                 },

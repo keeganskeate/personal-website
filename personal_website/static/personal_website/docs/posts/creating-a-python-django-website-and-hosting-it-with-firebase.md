@@ -1,15 +1,16 @@
 # Creating a Python Django Website and Hosting it with Firebase
 
-<small class="text-muted">Written 10/18/2020</small>
-<br>
-<small class="text-muted">Updated 11/7/2020</small>
+<small>Written 11/10/2020</small>
 
-Ever since I learned Python, I've wanted to create a website with Python. This site is built with Python Django and is open source, so, you can [clone this website](https://github.com/keeganskeate/personal-website) and tinker with it to your heart's content. The website works right out of the box, however, it is recommended to setup your own credentials for deploying to production. The website uses [Firebase](https://console.firebase.google.com/) by default for many back-end services. As you are free to modify anything, you are welcome to modify the website to use the back-end services of your choice. Creation is broken into three sections:
+$$e^x$$
+$$
+E(\mathbf{v}, \mathbf{h}) = -\sum_{i,j}w_{ij}v_i h_j - \sum_i b_i v_i - \sum_j c_j h_j
+$$
+$$\mathscr{L}(\beta)=\prod_{n=1}^N\prod_{j=1}^J(P_{nj})^{y_{nj}},$$
+
+Ever since I learned Python, I've wanted to create a website with Python. This site is built with Django, a Python-based web framework, and is open source, so, you can [clone this website](https://github.com/keeganskeate/personal-website) and tinker with it to your heart's content. The website works right out of the box, however, it is recommended to setup your own credentials when deploying to production. The website uses [Firebase](https://console.firebase.google.com/) by default for many back-end services. As you are free to modify anything, you are welcome to modify the website to use the back-end services of your choice. Creation follows 3 broad steps:
 
 * [Installation](#installation)
-  - [Credentials](#credentials)
-  - [Python](#python)
-  - [Node.js](#node)
 * [Development](#development)
 * [Publishing](#publishing)
 
@@ -23,6 +24,36 @@ First things first, you can clone the repository with:
 git clone https://github.com/keeganskeate/personal-website.git
 
 ```
+
+### Python<a name="python"></a>
+
+This website leverages the power of Python. The recommended way to install Python is with [Anaconda](https://www.anaconda.com/products/individual/get-started-commercial-edition-1). Anaconda Python is a self-contained Python environment that is particularly useful for scientific applications. After you have installed a [distribution of Python](https://docs.conda.io/en/latest/miniconda.html), open the Anaconda Prompt, navigate to this website's repository, and install Python dependencies:
+
+```shell
+
+pip install -r requirements.txt
+
+```
+
+You may also need to install other project and development dependencies, including:
+
+* [dj-static](https://github.com/heroku-python/dj-static): `pip install dj-static`
+* [django-livereload-server](https://github.com/tjwalch/django-livereload-server): `pip install django-livereload-server`
+* [Psycopg2](https://www.psycopg.org/install/): `pip install psycopg2`
+* [Python Decouple](https://pypi.org/project/python-decouple/): `pip install python-decouple`
+
+
+### Node.js<a name="node"></a>
+
+The website utilizes Node.js for certain web development tools. You can [download Node.js](https://nodejs.org/en/download/) and install Node.js dependencies in the command prompt:
+
+```shell
+
+npm install
+
+```
+
+### Architecture
 
 The website generally follows a model-template-view (MTV) architectural pattern, where:
 
@@ -104,13 +135,13 @@ gcloud services enable run.googleapis.com sql-component.googleapis.com sqladmin.
 
 You will need to [accept the Gcloud terms of service](https://console.developers.google.com/terms/cloud). Next, store the configurations as a secret by following these steps.
 
-1. Open Google Cloud Shell.
+1. Open [Google Cloud Shell](https://cloud.google.com/shell).
 
 2. Set the project with: `gcloud config set project personal-website`
 
-3. Set the following environment variables in the Google Cloud Shell, or optionally in the Google Cloud SDK or with the command line, noting that syntax will vary.
+3. Set the following environment variables in the Google Cloud Shell or optionally in the Google Cloud SDK or with the command line noting that syntax will vary.
 
-If you haven't already, then you can create a secret* if you haven't already with:
+If you haven't already, then you can create a secret if you haven't already with:
 
 ```shell
 
@@ -148,11 +179,7 @@ rm .env
 
 ```
 
-> Set `EMAIL_HOST_USER` and `EMAIL_HOST_PASSWORD` with your Gmail email and [an app password](https://dev.to/abderrahmanemustapha/how-to-send-email-with-django-and-gmail-in-production-the-right-way-24ab). If you do not plan to use Django's email interface, then you exclude `EMAIL_HOST_USER` and `EMAIL_HOST_PASSWORD`.
-
-> * You will need to setup billing for Google services at this point if you haven't already.
-
-You can allow Cloud Run access to access this secret with:
+> Set `EMAIL_HOST_USER` and `EMAIL_HOST_PASSWORD` with your Gmail email and [an app password](https://dev.to/abderrahmanemustapha/how-to-send-email-with-django-and-gmail-in-production-the-right-way-24ab). If you do not plan to use Django's email interface, then you exclude `EMAIL_HOST_USER` and `EMAIL_HOST_PASSWORD`. You will need to setup billing for Google services at this point if you haven't already. You can allow Cloud Run access to access this secret with:
 
 ```shell
 
@@ -170,47 +197,22 @@ gcloud secrets versions list etch_mobility_settings
 
 ```
 
-*(Optional)* you can [create a Google Cloud service account](https://cloud.google.com/docs/authentication/getting-started) and set the `GOOGLE_APPLICATION_CREDENTIALS` environmental variable to the full path to your credentials.
-
-When you are finished, you should have a `.env` file stored in your root directory. You can optionally store a Gcloud service account and/or a Firebase service account stored in `admin/tokens` if you need any Google Cloud or Firebase utilities. Keep your `.env` file and service accounts safe and do not upload them to a public repository.
+When you are finished, you should have a `.env` file stored in your root directory. You can optionally store a Gcloud service account and/or a Firebase service account stored in `admin/tokens` if you need any Google Cloud or Firebase utilities. You can [create a Google Cloud service account](https://cloud.google.com/docs/authentication/getting-started) and set the `GOOGLE_APPLICATION_CREDENTIALS` environmental variable to the full path to your credentials to use Firebase services from within the Django app. Keep your `.env` file and service accounts secure and do not upload them to a public repository.
 
 Helpful resources:
 
 * [Generating Django Secret Keys](https://stackoverflow.com/questions/4664724/distributing-django-projects-with-unique-secret-keys)
 
 
-### Python<a name="python"></a>
-
-This website leverages the power of Python. The recommended way to install Python is with [Anaconda](https://www.anaconda.com/products/individual/get-started-commercial-edition-1). Anaconda Python is a self-contained Python environment that is particularly useful for scientific applications.
-
-After you have installed a [distribution of Python](https://docs.conda.io/en/latest/miniconda.html), open the Anaconda Prompt, navigate to this website's repository, and install Python dependencies:
-
-```shell
-
-pip install -r requirements.txt
-
-```
-
-You may also need to install other project and development dependencies, including:
-
-* [dj-static](https://github.com/heroku-python/dj-static): `pip install dj-static`
-* [django-livereload-server](https://github.com/tjwalch/django-livereload-server): `pip install django-livereload-server`
-* [Psycopg2](https://www.psycopg.org/install/): `pip install psycopg2`
-* [Python Decouple](https://pypi.org/project/python-decouple/): `pip install python-decouple`
-
-
-### Node.js<a name="node"></a>
-
-The website utilizes Node.js for web development. You can [download Node.js](https://nodejs.org/en/download/) and install Node.js dependencies in the command prompt:
-
-```shell
-
-npm install
-
-```
-
-
 ## Development<a name="development"></a>
+
+You can then serve the site locally at <http://127.0.0.1:8000/> with:
+
+```shell
+
+python manage.py runserver
+
+```
 
 You can gather all supporting files into the `static` folder with:
 
@@ -221,14 +223,6 @@ python manage.py collectstatic
 ```
 
 You can add the `--noinput` tag to suppress the overwrite warning.
-
-You can then serve the site locally with:
-
-```shell
-
-python manage.py runserver
-
-```
 
 Helpful resources
 
@@ -251,7 +245,7 @@ pip install django-livereload-server
 
 > django-livereload-server uses both [python-livereload](https://github.com/lepture/python-livereload) and [django-livereload](https://github.com/Fantomas42/django-livereload) for smooth reloading. Either project can be substituted if bugs are encountered.
 
-In a console, start the livereload server:
+In a console, you can start the livereload server with:
 
 ```shell
 
@@ -259,7 +253,7 @@ python manage.py livereload
 
 ```
 
-In another console, start the Django development server:
+In another console, you can start the Django development server as usual and it will have live reloading:
 
 ```shell
 
@@ -275,9 +269,7 @@ npm run dev
 
 ```
 
-If you are using [VS Code](https://code.visualstudio.com/download), then you can use the [NPM-Scripts](https://github.com/Duroktar/vscode-npm-scripts) extension to open the first terminal in VS Code.
-
-> If you encounter a [django-livereload-server NotImplementedError](https://stackoverflow.com/questions/58422817/jupyter-notebook-with-python-3-8-notimplementederror), then it is likely that you are using Python 3.8+ and need to add the following code to `Lib\site-packages\tornado\platform\asyncio.py`.
+If you are using [VS Code](https://code.visualstudio.com/download), then you can use the [NPM-Scripts](https://github.com/Duroktar/vscode-npm-scripts) extension to open the first terminal in VS Code. If you encounter a [django-livereload-server NotImplementedError](https://stackoverflow.com/questions/58422817/jupyter-notebook-with-python-3-8-notimplementederror), then it is likely that you are using Python 3.8+ and need to add the following code to `Lib\site-packages\tornado\platform\asyncio.py`.
 
 ```python
 
@@ -298,25 +290,18 @@ Helpful resources:
 
 ### Views<a name="views"></a>
 
-Views are Python functions that describe the data to be presented. [Django describes views](https://docs.djangoproject.com/en/3.1/intro/tutorial03/#write-views-that-actually-do-something) in the following quote.
+Views are Python functions that describe the data to be presented. [Django describes views](https://docs.djangoproject.com/en/3.1/intro/tutorial03/#write-views-that-actually-do-something) in the following quote:
 
-> "Your view can read records from a database, or not. It can use a template system such as Django's - or a third-party Python template system - or not. It can generate a PDF file, output XML, create a ZIP file on the fly, anything you want, using whatever Python libraries you want."
+<small class="font-italic">"Your view can read records from a database, or not. It can use a template system such as Django's - or a third-party Python template system - or not. It can generate a PDF file, output XML, create a ZIP file on the fly, anything you want, using whatever Python libraries you want."</small>
 
 
 ### Templates<a name="templates"></a>
 
-Tempaltes are Django HTML files that describe how the data is presented.
-
-Default Django templates can be found in your Anaconda/Python directory in `Lib\site-packages\django\contrib\admin\templates\admin`.
-
-All text material is either stored in JSON in `state.py` or written in Markdown in `docs` directories.
+Tempaltes are Django HTML files that describe how the data is presented. Default Django templates can be found in your Anaconda/Python directory in `Lib\site-packages\django\contrib\admin\templates\admin`. This website has opted for a NoSQL approach for data management with Firebase's [Firestore](https://firebase.google.com/docs/firestore). All text material is either stored in JSON in `state.py` or written in Markdown in `docs` directories.
 
 Helpful resources:
 
 * [`python-markdown` Extensions](https://python-markdown.github.io/extensions/)
-
-
-This website has opted for a NoSQL approach for data management with Firebase's [Firestore](https://firebase.google.com/docs/firestore).
 
 
 ### Style<a name="style"></a>
@@ -350,6 +335,8 @@ gcloud secrets versions add etch_mobility_settings --data-file .env
 
 ```
 
+Helpful resources:
+
 * [Email Self-Defense](https://emailselfdefense.fsf.org/en/)
 * [GnuPG](https://www.gnupg.org/)
 * [Django Email Templates](https://github.com/vintasoftware/django-templated-email)
@@ -357,7 +344,7 @@ gcloud secrets versions add etch_mobility_settings --data-file .env
 
 ### Forms<a name="forms"></a>
 
-Django makes creating stock forms easy.
+Django makes creating stock forms easy. Here are a few helpful resources to help you get started:
 
 * [django-crispy-forms](https://django-crispy-forms.readthedocs.io/en/latest/crispy_tag_forms.html)
 * [How to use Bootstrap 4 Forms with Django](https://simpleisbetterthancomplex.com/tutorial/2018/08/13/how-to-use-bootstrap-4-forms-with-django.html)
@@ -382,9 +369,6 @@ python manage.py test personal_website
 
 ```
 
-See [testing](/testing) for more information.
-
-
 ## Publishing<a name="publishing"></a>
 
 Publishing is done with one command:
@@ -395,9 +379,7 @@ npm run publish
 
 ```
 
-However, you will probably want to walk through the build process manually one time before using `npm run publish` to re-deploy when necessary.
-
-You will need to have Firebase's command line tool installed:
+However, you will probably want to walk through the build process manually one time before using `npm run publish` to re-deploy when necessary. You will need to have Firebase's command line tool installed:
 
 ```shell
 
@@ -417,9 +399,9 @@ firebase login
 
 The publishing build process contains three steps:
 
-1. The app is containerized and uploaded to Container Registry.
+### 1. The app is containerized and uploaded to Container Registry.
 
-You can build your container image using Cloud Build by running the following command from the directory containing the Dockerfile:
+You can build your container image using Cloud Build by running the following command from the directory containing the Dockerfile. Note that your `APP_ID` must be in snake case.
 
 ```shell
 
@@ -430,9 +412,9 @@ gcloud builds submit --tag gcr.io/%PROJECT_ID%/%APP_ID%
 
 ```
 
-> Note that your `APP_ID` must be in snake case.
+### 2. The container image is deployed to Cloud Run.
 
-2. The container image is deployed to Cloud Run.
+You can containerize and deploy the website with:
 
 ```shell
 
@@ -441,21 +423,20 @@ gcloud run deploy %PROJECT_ID% --image gcr.io/%PROJECT_ID%/%APP_ID% --region %RE
 
 ```
 
-> This project uses a fully managed Cloud Run platform. You can look into [Cloud Run for Anthos](https://cloud.google.com/anthos/run) if you desire.
+This project uses a fully managed Cloud Run platform. You can look into [Cloud Run for Anthos](https://cloud.google.com/anthos/run) if you desire. You can retrieve the service URL with:
 
-> You can retrieve the service URL with:
-  ```shell
+```shell
 
-  gcloud run services describe etch-mobility \
-    --platform managed \
-    --region $REGION  \
-    --format "value(status.url)"
+gcloud run services describe etch-mobility \
+  --platform managed \
+  --region $REGION  \
+  --format "value(status.url)"
 
-  ```
+```
 
-3. Hosting requests are directed to the containerized app.
+### 3. Hosting requests are directed to the containerized app.
 
-This step provides access to this containerized app from a [Firebase Hosting](https://firebase.google.com/docs/hosting) URL, so that the app can generate dynamic content for the Firebase-hosted site.
+This step provides access to this containerized app from a [Firebase Hosting](https://firebase.google.com/docs/hosting) URL, so that the app can generate dynamic content for the Firebase-hosted site. You will need to be logged in with `firebase login`.
 
 ```shell
 
@@ -463,20 +444,19 @@ firebase deploy --project keegan-skeate-website
 
 ```
 
-> You will need to be logged in with `firebase login`.
+If you are using an SQL database, then you will also need to run:
 
-> If you are using an SQL database, then you will also need to run:
-  ```shell
+```shell
 
-  gcloud builds submit --config cloudmigrate.yaml \
-    --substitutions _REGION=$REGION
+gcloud builds submit --config cloudmigrate.yaml \
+  --substitutions _REGION=$REGION
 
-  ```
+```
 
 
 ## Monitoring
 
-You can view logs for your deployment in the Cloud run console at <https://console.cloud.google.com/run/detail/us-central1/your-project/logs?project=your-project>. When you are ready to re-deploy, simple run:
+You can view logs for your deployment in the Cloud Run console. When you are ready to re-deploy simply run:
 
 ```shell
 
@@ -484,8 +464,6 @@ npm run publish
 
 ```
 
-You can register a domain with [Google Domains](https://domains.google.com/registrar/). You can then add a custom domain in the Firebase Hosting console.
+<!-- You can register a domain with [Google Domains](https://domains.google.com/registrar/). You can then add a custom domain in the Firebase Hosting console. If you are using Google Domains, then use '@' for your root domain name and 'www' or 'www.domain.com' for your subdomains when registering your DNS A records. -->
 
-> If you are using Google Domains, then use '@' for your root domain name and 'www' or 'www.domain.com' for your subdomains when registering your DNS A records.
-
-You now have a simple, yet complex, website running on Cloud Run, which will automatically scale to handle your website's traffic, optimizing CPU and memory so that your website runs with the smallest footprint possible, saving you money. If you desire, you can now seamlessly integrate services such as Cloud Storage into you Django website. You can now plug and play and tinker to your heart's content while your user's enjoy your beautiful material!
+You now have a simple, yet complex, website running on Cloud Run, which will automatically scale to handle your website's traffic, optimizing CPU and memory so that your website runs with the smallest footprint possible, saving you money. If you desire, you can now seamlessly integrate services such as Cloud Storage into your Python-based website. You can now plug and play and tinker to your :heart:'s content while your users enjoy your beautiful material!

@@ -48,7 +48,7 @@ When I was a graduate student, I has served as teaching assistant for several fa
 I aided Professor Paul Gaggl in his research on the distributional effect on wages from electricity adoption in the early 20th century and assisted Professor Ellen Sewell in her research on fixed book price laws in Europe and the theoretical welfare implications of resale price maintenance. I also conducted original research on the motivations for families in the United States to give to charity.
 
 
-## Finance Experience
+## Finance Experience<a id="experience"></a>
 
 I have completed two professional internships. First, I helped to implement an enterprise software system for [Kimbrell's Furniture](https://kimbrells.com/) that manages more than $40 million in accounts receivable and $8 million in inventory for their 45 retail locations in 3 states.
 

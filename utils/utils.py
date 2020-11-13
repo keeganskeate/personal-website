@@ -12,17 +12,18 @@ EXTENSIONS = [
     # "def_list",
     "codehilite",
     "fenced_code",
+    "attr_list",
     # "nl2br", # Newlines treated as hard breaks
     # "smarty",  # Converts dashes, quotes, and ellipses.
     # "tables",  # Creates tables.
-    # "toc",  # Creates table of contents with [TOC].
-    # 'pymdownx.emoji',
+    "toc",  # Creates table of contents with [TOC] and adds id's to headers.
     # 'pymdownx.superfences',
     # 'markdown.extensions.tables',
     # 'pymdownx.magiclink',
     # 'pymdownx.betterem',
     # 'pymdownx.highlight',
     # 'pymdownx.tilde',
+    'pymdownx.arithmatex',
     'pymdownx.emoji',
     # 'pymdownx.tasklist',
     # 'pymdownx.superfences',
