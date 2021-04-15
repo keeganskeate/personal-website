@@ -1,9 +1,8 @@
 # My Personal Website
 
-My (your) personal website.
+Keegan Skeate's personal website.
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
 My personal website is a modern portfolio website, built on the bleeding edge, to help you showcase your work. My personal website comes with **batteries included**, but you are always welcome to supercharge your setup with modifications and custom components. My personal website is:
 

@@ -10,9 +10,11 @@
     "productName": "Keegan Skeate"
   },
   "scripts": {
+    "dev": "webpack-dev-server --env development",
+    "livereload": "python manage.py livereload",
+    "runserver": "python manage.py runserver",
     "collectstatic": "python manage.py collectstatic --noinput",
     "lint": "python manage.py check",
-    "dev": "start cmd.exe /k python manage.py runserver && python manage.py livereload",
     "dev-publish": "firebase deploy --only hosting:dev",
     "publish": "npm run container && npm run cloud && npm run deploy",
     "container": "npm run collectstatic && gcloud builds submit --tag gcr.io/keegan-skeate-website/personal-website",

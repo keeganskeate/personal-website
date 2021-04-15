@@ -1,36 +1,21 @@
+<!-- Posts -->
+<!-- Created 11/23/2020 -->
 {% extends "personal_website/index.html" %}
-
-<!-- Title -->
 {% block title %}Posts | {{ state.author }}{% endblock %}
-
-{% load static mathjax %}
-
-<!-- Page styles -->
-{% block page_css %}
+{% load static %}
+{% block custom_css %}
   <link href="{% static 'personal_website/css/blog.css'%}?{% now "U" %}" rel="stylesheet" type="text/css">
-  {% comment %} <script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});</script>
-  <script type="text/javascript" async  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_CHTML"></script> {% endcomment %}
-	{% comment %} <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script> {% endcomment %}
-  {% comment %} <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script> {% endcomment %}
-  {% comment %} <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js"></script> {% endcomment %}
-  {% comment %} <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3.0.1/es5/tex-mml-chtml.js"></script> {% endcomment %}
-  {% mathjax_scripts %}
+  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js" id="MathJax-script" type="text/javascript"></script>
+  <!-- FIXME: Only load MathJax if math is detected. -->
+  <!-- http://docs.mathjax.org/en/latest/web/typeset.html#loading-mathjax-only-on-pages-with-math -->
+  {% comment %} <script src="{% static 'personal_website/js/check-for-tex.js'%}" defer></script> {% endcomment %}
 {% endblock %}
-
-<!-- Posts Template -->
 {% block material %}
   <main role="main" class="container">
 
-  <div>
-  When \(a \ne 0\), there are two solutions to \(ax^2 + bx + c = 0\) and they are
-$$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
-</div>
-
     <!-- Post Body -->
     <div class="d-flex mt-auto justify-content-center flex-wrap-reverse">
-      <div class="col-md-8 py-5 markdown">
+      <div class="col-lg-8 py-5 markdown">
         {{ markdown | safe }}
       </div>
     </div>
@@ -107,9 +92,22 @@ $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
       </aside><!-- /.blog-sidebar --> {% endcomment %}
 
     </div><!-- End of Archive -->
-    
-  <!-- Post JavaScript --><!-- TODO: Turn into custom_js block -->
+
+  </main>
+{% endblock %}
+
+{% block custom_js %}
   <script>
+
+    // Typeset any math.
+    try {
+      MathJax.typeset();
+    } catch(error) {
+      // MathJax not loaded.
+    }
+    
+
+    // Show archive or specific post.
     (function toggleArchive () {
       var archive = document.getElementById("post-archive");
       if (window.location.pathname.split('/').length > 3) {
@@ -119,38 +117,5 @@ $$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$
       }
     })();
 
-    {% comment %} window.MathJax = {
-      options: {
-        ignoreHtmlClass: 'tex2jax_ignore',
-        processHtmlClass: 'tex2jax_process',
-        renderActions: {
-          find: [10, function (doc) {
-            for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
-              const display = !!node.type.match(/; *mode=display/);
-              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
-              const text = document.createTextNode('');
-              const sibling = node.previousElementSibling;
-              node.parentNode.replaceChild(text, node);
-              math.start = {node: text, delim: '', n: 0};
-              math.end = {node: text, delim: '', n: 0};
-              doc.math.push(math);
-              if (sibling && sibling.matches('.MathJax_Preview')) {
-                sibling.parentNode.removeChild(sibling);
-              }
-            }
-          }, '']
-        }
-      }
-    }; {% endcomment %}
-
   </script>
-  <script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-      config: ["MMLorHTML.js"],
-      jax: ["input/TeX", "output/HTML-CSS", "output/NativeMML"],
-      extensions: ["MathMenu.js", "MathZoom.js"]
-    });
-  </script>
-
-  </main>
 {% endblock %}

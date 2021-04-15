@@ -28,5 +28,11 @@
     "editor.tabSize": 4  
   },
   "npm-scripts.showStartNotification": false,
-  "python.linting.enabled": true
+  "python.linting.enabled": true,
+  "cSpell.words": [
+    "collectstatic",
+    "gcloud",
+    "noinput",
+    "runserver"
+  ]
 }

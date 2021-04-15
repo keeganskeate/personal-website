@@ -35,7 +35,7 @@
     <link href="{% static 'personal_website/css/main.css'%}?{% now "U" %}" rel="stylesheet" type="text/css">
 
     <!-- Page-specific Stylesheets -->
-    {% block page_css %}{% endblock %}
+    {% block custom_css %}{% endblock %}
 
     <!-- PRODUCTION: Firebase Analytics -->
     {% comment %} <script src="/__/firebase/7.24.0/firebase-app.js"></script> {% endcomment %}
@@ -46,11 +46,6 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <!-- DEV: Serve jQuery locally -->
     {% comment %} <script src="{% static 'etch_mobility/js/jquery.slim.min.js'%}"></script> {% endcomment %}
-
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script type="text/javascript" id="MathJax-script" async
-      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
-    </script>
 
   </head>
   <body class="base">
@@ -64,6 +59,9 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
     <!-- DEV: Serve Bootstrap JavaScript locally -->
     {% comment %} <script src="{% static 'etch_mobility/js/bootstrap.min.js'%}"></script> {% endcomment %}
+
+    <!-- Page-specific JavaScript -->
+    {% block custom_js %}{% endblock %}
 
   </body>
 </html>

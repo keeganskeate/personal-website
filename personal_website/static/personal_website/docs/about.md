@@ -10,7 +10,7 @@
   style="border-radius:50%;"
 />
 
-My name is Keegan Skeate and I am an economist, software developer, and data scientist. I have even worked as a laboratory analyst performing a wide range of analyses on cannabis. I have earned two master's in economics, one from the [University of North Carolina, Charlotte](https://www.uncc.edu/) and the second from the [University of California, Irvine](https://uci.edu/). My career objective is to contribute ideas, knowledge, and skills to help build and create meaningful projects, tools, and systems.
+My name is Keegan Skeate and I am an economist, software developer, and data scientist. I have even worked as a laboratory analyst performing a wide range of analyses on cannabis. I have earned two master's in economics, one from the [University of North Carolina, Charlotte](https://www.uncc.edu/) and the second from the [University of California, Irvine](https://uci.edu/). My career objective is to systematically contribute ideas, knowledge, and skills to help create and build meaningful projects, tools, and systems.
 
 
 ## Story
@@ -19,7 +19,7 @@ I started my education as a business student at [AB Tech](https://abtech.edu/) i
 
 Next, I applied to applied to UNC Charlotte's [graduate school](https://graduateschool.uncc.edu/). I was accepted and earned a Masters in Economics in record-time by writing a master's thesis while taking coursework.
 
-I then applied and was accepted into the University of California, Irvine Ph.D. in Economics program. I excelled in microeconomics and econometrics, earning top-marks on the microeconomic comprehensive exam and was awarded the [Judges' Winner in Economics]((https://symposium.ags.uci.edu/2016-winners-abstracts/)) at the 2016 Graduate Student Symposium. Unfortunately, I did not pass the macroeconomic comprehensive and my education concluded with a second masters in economics.
+I then applied and was accepted into the University of California, Irvine Ph.D. in Economics program. I excelled in microeconomics and econometrics, earning top-marks on the microeconomic comprehensive exam and was awarded the [Judges' Winner in Economics]((https://symposium.ags.uci.edu/2016-winners-abstracts/)) at the 2016 Graduate Student Symposium. Unfortunately, or fortunately depending on your perspective, I did not pass the macroeconomic comprehensive exam and my education concluded with a second masters in economics.
 
 
 ## Education

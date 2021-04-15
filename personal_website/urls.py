@@ -21,7 +21,7 @@ Examples:
 
 """
 from django.contrib import admin
-from django.urls import include, path
+from django.urls import include, path, re_path
 from django.contrib.auth import views as auth_views
 from django.conf import settings
 
@@ -36,14 +36,27 @@ urlpatterns = [
     path("privacy-policy/", views.PrivacyPolicyView.as_view(), name="privacy-policy"),
     path("thank-you/", views.ThankYouView.as_view(), name="thank-you"),
     path("donate/", views.DonateView.as_view(), name="donate"),
-    path("portfolio/", views.PortfolioView.as_view(), name="portfolio"),
+    path("portfolio", views.PortfolioView.as_view(), name="portfolio"),
+    path("portfolio/<slug:page_slug>/", views.PortfolioView.as_view(), name="portfolio-item"),
+    # FIXME: Make specific portfolio items obsolete.
+    path("portfolio/coverletter-ai", views.PortfolioView.as_view(), name="coverletter-ai"),
+    path("portfolio/skateclipper", views.PortfolioView.as_view(), name="skateclipper"),
+    path("portfolio/business-website", views.PortfolioView.as_view(), name="business-website"),
+    path("portfolio/cannlytics", views.PortfolioView.as_view(), name="cannlytics"),
     path("posts/", views.PostsView.as_view(), name="posts"),
     path("posts/<slug:page_slug>/", views.PostsView.as_view(), name="post"),
-    path("software/", views.ThankYouView.as_view(), name="software"),
-    path("software/coverletter-ai", views.ThankYouView.as_view(), name="coverletter-ai"),
-    path("software/skateclipper", views.ThankYouView.as_view(), name="skateclipper"),
-    path("software/business-website", views.ThankYouView.as_view(), name="business-website"),
-    path("software/cannlytics", views.ThankYouView.as_view(), name="cannlytics"),
+    # TODO: Redirect any portfolio url
+]
+
+# Deprecated URLs
+urlpatterns += [
+  path("pdfs/<slug:page_slug>", views.pdf_view), # FIXME:
+#   path("pdfs/resume.pdf", views.pdf_view),
+  path("recent_work/", views.PortfolioView.as_view()),
+  # #gibbs-probit
+  # #conditional-logit
+  # #tailored-mh
+  # pdfs/resume
 ]
 
 # Authentication (Optional)

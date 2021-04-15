@@ -129,6 +129,10 @@ This website has opted for a NoSQL approach for data management with Firebase's 
 
 Style distinguishes one site from another. You are free and encouraged to modify the style to create a site that is uniquely yours. See [style.md](style.md) for a guide on the personal website's style.
 
+### Math
+
+http://docs.mathjax.org/en/latest/web/typeset.html#loading-mathjax-only-on-pages-with-math
+
 
 ## Email
 
@@ -157,7 +161,7 @@ gcloud secrets versions add etch_mobility_settings --data-file .env
 
 ## Forms
 
-Django makes creating stock forms easy.
+Django makes creating stock forms easy. You may want to add a [captcha](https://pypi.org/project/django-simple-math-captcha/) to prevent spam in forms.
 
 * [django-crispy-forms](https://django-crispy-forms.readthedocs.io/en/latest/crispy_tag_forms.html)
 * [How to use Bootstrap 4 Forms with Django](https://simpleisbetterthancomplex.com/tutorial/2018/08/13/how-to-use-bootstrap-4-forms-with-django.html)

@@ -31,7 +31,8 @@ state = {
 }
 
 homepage = {
-    "blurb": "Economist, software developer, and data scientist currently available for employment. You can feel free to contact me anytime.",
+    # "blurb": "Economist, software developer, and data scientist currently available for employment. You can feel free to contact me anytime.",
+    "blurb": "Writing about economics, software development, and data science. Check back for new material.",
     "hero": {
         "action": "Request a project",
         "title": "Data scientist, software developer, and economist.",
@@ -44,10 +45,10 @@ portfolio = [
     {
         "category": "Logo",
         "title": "Logo for Myong Sae",
-        "description": "A logo designed for Myong Sae Salon and Spa.",
+        "description": "A logo designed for Myong Sae Salon and Spa. Myong means lightbringer in Korean.",
         "written_at": "Oct. 25, 2020",
         "url": "/portfolio/myong-sae-logo",
-        "image": "personal_website/images/logos/myong_sae_logo_light.png",
+        "image": "personal_website/images/logos/myong_sae_logo.png",
     },
     {
         "category": "Website",
@@ -77,9 +78,11 @@ posts = {
     "posts": [
         {
             "title": "Creating a Website with Python's Django and Hosting it with Firebase",
-            "url": "/posts/creating-a-python-django-website-and-hosting-it-with-firebase",
-            "written_at": "November 10th, 2020",
             "description": "Ever since I learned Python, I've wanted to create a website with Python. This site is built with Python Django and is open source, so, you can clone this website and tinker with it to your heart's content.",
+            "url": "/posts/creating-a-python-django-website-and-hosting-it-with-firebase",
+            "views": 0,
+            "written_at": "11/10/2020",
+            "updated_at": "",
         },
     ]
 }

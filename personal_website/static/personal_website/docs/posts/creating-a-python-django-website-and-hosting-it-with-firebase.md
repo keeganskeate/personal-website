@@ -1,12 +1,6 @@
 # Creating a Python Django Website and Hosting it with Firebase
 
-<small>Written 11/10/2020</small>
-
-$$e^x$$
-$$
-E(\mathbf{v}, \mathbf{h}) = -\sum_{i,j}w_{ij}v_i h_j - \sum_i b_i v_i - \sum_j c_j h_j
-$$
-$$\mathscr{L}(\beta)=\prod_{n=1}^N\prod_{j=1}^J(P_{nj})^{y_{nj}},$$
+11/10/2020
 
 Ever since I learned Python, I've wanted to create a website with Python. This site is built with Django, a Python-based web framework, and is open source, so, you can [clone this website](https://github.com/keeganskeate/personal-website) and tinker with it to your heart's content. The website works right out of the box, however, it is recommended to setup your own credentials when deploying to production. The website uses [Firebase](https://console.firebase.google.com/) by default for many back-end services. As you are free to modify anything, you are welcome to modify the website to use the back-end services of your choice. Creation follows 3 broad steps:
 

@@ -1,5 +1,7 @@
 import os
 
+from django.http import FileResponse, Http404
+from django.shortcuts import redirect
 from django.views.generic.base import TemplateView
 from django.views.generic.edit import FormView
 
@@ -95,3 +97,14 @@ class ThankYouView(TemplateView):
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         return create_page_context(context, FILE_PATH)
+
+
+def pdf_view(request):
+    filename = request.path.split('/pdf/')[-1]
+    print('TODO: Get PDF url from Firestore.:', filename)
+    file_url = r"https://firebasestorage.googleapis.com/v0/b/keegan-skeate-website.appspot.com/o/public%2Fwebsite%2Fpdfs%2Fresume.pdf?alt=media&token=0560d36a-917c-4c14-a2c0-d11802a65dd4"
+    try:
+        return redirect(file_url)
+    except FileNotFoundError:
+        raise Http404()
+

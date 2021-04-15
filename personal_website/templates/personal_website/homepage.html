@@ -7,7 +7,7 @@
 {% block title %}Welcome | {{ state.author }}{% endblock %}
 
 <!-- Page styles -->
-{% block page_css %}
+{% block custom_css %}
   <link href="{% static 'personal_website/css/blog.css'%}" rel="stylesheet" type="text/css">
 {% endblock %}
 
@@ -45,7 +45,7 @@
           </a>
         </p>
       </div>
-      <div class="col no-grow mb-5">
+      <div class="col no-grow my-0 my-lg-5">
         <img
           src="{% static 'personal_website/images/illustrations/brilliant_ideas.svg' %}"
           width="500"
@@ -69,7 +69,7 @@
                 </h3>
                 <img
                   src="{% static item.image %}"
-                  style="width:auto; width:300px; align-self:center;"
+                  style="width:auto; height:200px; align-self:center;"
                   class="my-2"
                 >
                 <p class="card-text text-dark mb-auto">

@@ -31,7 +31,6 @@ WSGI_APPLICATION = "personal_website.wsgi.application"
 INSTALLED_APPS = [
     "crispy_forms",
     "livereload",  # Must be before django.contrib.staticfiles
-    "django_mathjax",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -40,15 +39,6 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
 ]
 CRISPY_TEMPLATE_PACK = "bootstrap4"
-MATHJAX_CONFIG_DATA = {
-  "tex2jax": {
-    "inlineMath":
-      [
-          ['$','$'],
-          ['\\(','\\)']
-      ]
-  }
-}
 
 if PRODUCTION:
     INSTALLED_APPS.remove("livereload")
