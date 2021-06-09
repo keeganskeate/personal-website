@@ -4,7 +4,7 @@
 
 black
 dj_static
-django==3.1.9
+django==3.1.10
 django-crispy-forms
 django-environ==0.4.5
 django-livereload-server
